@@ -1,8 +1,8 @@
 <!--Navbar -->
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark scrolling-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar" style="background: black">
 
     <!-- Brand -->
-    <a class="navbar-brand" href="#">{{ title }}</a>
+    <a class="navbar-brand" routerLink="/home">{{ title }}</a>
     <!--/.Brand -->
 
     <!-- Collapse -->
@@ -18,12 +18,12 @@
       <!-- Left -->
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link waves-effect waves-light" href="#">All Courses
+          <a class="nav-link waves-effect waves-light" routerLink="/all-courses">All Courses
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link waves-effect waves-light" href="#">Favourite Courses</a>
+          <a class="nav-link waves-effect waves-light" routerLink="">Favourite Courses</a>
         </li>
       </ul>
       <!--/.Left -->
@@ -36,18 +36,18 @@
             <i class="far fa-user" style="color:white"></i>Profile
           </a>
           <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-            <a class="dropdown-item waves-effect waves-light" href="#">My account</a>
-            <a class="dropdown-item waves-effect waves-light" href="#">Log out</a>
+            <a class="dropdown-item waves-effect waves-light" routerLink="">My account</a>
+            <a class="dropdown-item waves-effect waves-light" routerLink="">Log out</a>
           </div>
         </li>
       </ul>
       <ng-template #elseBlock>
       <ul class="navbar-nav ml-auto nav-flex-icons">
         <li class="nav-item">
-          <a class="nav-link waves-effect waves-light" href="#" role="button">Sign up</a>
+          <a class="nav-link waves-effect waves-light" routerLink="/register" role="button">Sign up</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link waves-effect waves-light" href="#">Login</a>
+          <a class="nav-link waves-effect waves-light" routerLink="/login">Login</a>
         </li>
       </ul>
       </ng-template>

@@ -1,0 +1,247 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "password": "adminpass",
+      "firstName": "Admin",
+      "lastName": "Admin",
+      "email": "admin@admin.com"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Machine Learning",
+      "description": "Machine learning is the science of getting computers to act without being explicitly programmed. In the past decade, machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome. Machine learning is so pervasive today that you probably use it dozens of times a day without knowing it. Many researchers also think it is the best way to make progress towards human-level AI. In this class, you will learn about the most effective machine learning techniques, and gain practice implementing them and getting them to work for yourself. More importantly, you'll learn about not only the theoretical underpinnings of learning, but also gain the practical know-how needed to quickly and powerfully apply these techniques to new problems. Finally, you'll learn about some of Silicon Valley's best practices in innovation as it pertains to machine learning and AI.\n\nThis course provides a broad introduction to machine learning, datamining, and statistical pattern recognition. Topics include: (i) Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels, neural networks). (ii) Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning). (iii) Best practices in machine learning (bias/variance theory; innovation process in machine learning and AI). The course will also draw from numerous case studies and applications, so that you'll also learn how to apply learning algorithms to building smart robots (perception, control), text understanding (web search, anti-spam), computer vision, medical informatics, audio, database mining, and other areas.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    },
+    {
+      "id": 2,
+      "title": "Modern Art & Ideas",
+      "description": "Welcome to Modern Art & Ideas! This course is designed for anyone interested in learning more about modern and contemporary art. Over the next five weeks, you will look at art through a variety of themes: Places & Spaces, Art & Identity, Transforming Everyday Objects, and Art & Society. Each week kicks off with a video that connects works of art from The Museum of Modern Art’s collection to the theme. You will hear audio interviews with artists, designers, and curators and learn more about selected works in the additional readings and resources.\n\nThroughout this course you will discover how artists:\n-- represent place and take inspiration from their environment,\n-- create works of art to express, explore, and question identity,\n-- use everyday objects to challenge assumptions about what constitutes a work of art and how it should be made,\n-- and respond to the social, cultural, and political issues of their time through works of art.\n\nThrough the discussion forum prompts and peer review assignment, you will also have the opportunity to connect with other learners and explore how these themes resonate with your own life and experience.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    } ,
+    {
+      "id": 3,
+      "title": "Learning to Teach Online",
+      "description": "Are you an educator? Have you ever wanted to understand more about how to design your class to make better use of educational technology – whether fully online or in blended contexts? Would you like to learn from those who have extensive practical experience with online technologies? \n\nThe Learning to Teach Online (LTTO) MOOC will help you develop a working understanding of successful online teaching strategies that you can apply in your own practice. The course is based upon the multi award winning open educational resource developed by Dr Simon McIntyre and Karin Watson. \n\nIntegrating online technologies into your teaching can be a challenging prospect, and it can be difficult to know how to approach it effectively for the benefit of both students and yourself. No one knows your own content and teaching strengths better than you, and the “one size fits all” formula doesn’t always suit everyone. No matter what type of technology you are interested in exploring or your level of experience, this course will help you draw on your teaching strengths and find the approach that is right for you, your students and your educational context. \n\nThis course will guide you through your journey of understanding how online technologies can enhance your course design. You will have the opportunity to develop your understanding of effective online teaching practices and their relationship to the use of different technologies. You will also be encouraged to progressively design and reflect upon your own online learning activity, assessment or resource for use in your own class if you choose to undertake the course assignments. ",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    },
+    {
+      "id": 4,
+      "title": "Game Theory",
+      "description": "Popularized by movies such as \"A Beautiful Mind,\" game theory is the mathematical modeling of strategic interaction among rational (and irrational) agents. Beyond what we call `games' in common language, such as chess, poker, soccer, etc., it includes the modeling of conflict among nations, political campaigns, competition among firms, and trading behavior in markets such as the NYSE. How could you begin to model keyword auctions, and peer to peer file-sharing networks, without accounting for the incentives of the people using them? The course will provide the basics: representing games and strategies, the extensive form (which computer scientists call game trees), Bayesian games (modeling things like auctions), repeated and stochastic games, and more. We'll include a variety of examples including classic games and a few applications.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 5,
+      "title": "English for Career Development",
+      "description": "This course is designed for non-native English speakers who are interested in advancing their careers in the global marketplace.  In this course, you will learn about the job search, application, and interview process in the United States, while comparing and contrasting the same process in your home country. This course will also give you the opportunity to explore your global career path, while building your vocabulary and improving your language skills to achieve your professional goals. The first unit in this course will introduce the U.S. job application process and provide strategies for identifying the jobs that match your interests and skills. Unit 2 will take you through the steps necessary to produce a professional-looking resume. In unit 3, you will work to develop a clear and concise cover letter. The final unit of the course focuses on networking and interview skills.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 6,
+      "title": "Managing the Company of the Future",
+      "description": "The aim of the course is to provide you with a comprehensive framework for understanding both the traditional principles of management inside companies today as well as the alternative principles that are becoming increasingly important. It provides both theoretical and practical perspectives on the nature of management in today’s organisations.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 7,
+      "title": "Understanding Research Methods",
+      "description": "This MOOC is about demystifying research and research methods. It will outline the fundamentals of doing research, aimed primarily, but not exclusively, at the postgraduate level. It places the student experience at the centre of our endeavours by engaging learners in a range of robust and challenging discussions and exercises befitting SOAS, University of London's status as a research-intensive university and its rich research heritage.\n\nThe course will appeal to those of you who require an understanding of research approaches and skills, and importantly an ability to deploy them in your studies or in your professional lives. In particular, this course will aid those of you who have to conduct research as part of your postgraduate studies but do not perhaps have access to research methods courses, or for those of you who feel you would like additional support for self-improvement. No prior knowledge or experience in research is required to take this course and as such, the course is for everyone. ",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 8,
+      "title": "Cryptography I",
+      "description": "Cryptography is an indispensable tool for protecting information in computer systems. In this course you will learn the inner workings of cryptographic systems and how to correctly use them in real-world applications. The course begins with a detailed discussion of how two parties who have a shared secret key can communicate securely when a powerful adversary eavesdrops and tampers with traffic. We will examine many deployed protocols and analyze mistakes in existing systems. The second half of the course discusses public-key techniques that let two parties generate a shared secret key. Throughout the course participants will be exposed to many exciting open problems in the field and work on fun (optional) programming projects. In a second course (Crypto II) we will cover more advanced cryptographic tasks such as zero-knowledge, privacy mechanisms, and other forms of encryption.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 9,
+      "title": "Greek and Roman Mythology",
+      "description": "Myths are traditional stories that have endured over a long time. Some of them have to do with events of great importance, such as the founding of a nation. Others tell the stories of great heroes and heroines and their exploits and courage in the face of adversity. Still others are simple tales about otherwise unremarkable people who get into trouble or do some great deed. What are we to make of all these tales, and why do people seem to like to hear them? This course will focus on the myths of ancient Greece and Rome, as a way of exploring the nature of myth and the function it plays for individuals, societies, and nations. We will also pay some attention to the way the Greeks and Romans themselves understood their own myths. Are myths subtle codes that contain some universal truth? Are they a window on the deep recesses of a particular culture? Are they a set of blinders that all of us wear, though we do not realize it? Or are they just entertaining stories that people like to tell over and over? This course will investigate these questions through a variety of topics, including the creation of the universe, the relationship between gods and mortals, human nature, religion, the family, sex, love, madness, and death.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 10,
+      "title": "Creative Thinking: Techniques and Tools for Success",
+      "description": "In today’s ever-growing and changing world, being able to think creatively and innovatively are essential skills. It can sometimes be challenging to step back and reflect in an environment which is fast paced or when you are required to assimilate large amounts of information. Making sense of or communicating new ideas in an innovative and engaging way, approaching problems from fresh angles, and producing novel solutions are all traits which are highly sought after by employers.\n\nThis course will equip you with a ‘tool-box’, introducing you to a selection of behaviours and techniques that will augment your innate creativity. Some of the tools are suited to use on your own and others work well for a group, enabling you to leverage the power of several minds.  You can pick and choose which of these tools or techniques suit your needs and interests, focusing on some or all of the selected approaches and in the order that fits best for you. The greatest innovators aren’t necessarily the people who have the most original idea. Often, they are people- or teams- that have harnessed their creativity to develop a new perspective or more effective way of communicating an idea. You can train your imagination to seize opportunities, break away from routine and habit, and tap into your natural creativity.\n\nJoin this course and our community of practitioners in CREATIVITY!",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 11,
+      "title": "Introduction to Programming with MATLAB",
+      "description": "This course teaches computer programming to those with little to no previous experience. It uses the programming system and language called MATLAB to do so because it is easy to learn, versatile and very useful for engineers and other professionals. MATLAB is a special-purpose language that is an excellent choice for writing moderate-size programs that solve problems involving the manipulation of numbers. The design of the language makes it possible to write a powerful program in a few lines. The problems may be relatively complex, while the MATLAB programs that solve them are relatively simple: relative, that is, to the equivalent program written in a general-purpose language, such as C++ or Java. As a result, MATLAB is being used in a wide variety of domains from the natural sciences, through all disciplines of engineering, to finance, and beyond, and it is heavily used in industry. Hence, a solid background in MATLAB is an indispensable skill in today’s job market.\n\nNevertheless, this course is not a MATLAB tutorial. It is an introductory programming course that uses MATLAB to illustrate general concepts in computer science and programming. Students who successfully complete this course will become familiar with general concepts in computer science, gain an understanding of the general concepts of programming, and obtain a solid foundation in the use of MATLAB.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 12,
+      "title": "Wind Energy",
+      "description": "How tall is a modern wind turbine and how can it possibly generate power from the wind? This course gives an overview of key aspects in wind energy engineering. Whether you are looking for general insight in this green technology or your ambition is to pursue a career in wind energy engineering, 'Wind Energy' is an excellent starting point. \n\nExperts located in the wind pioneering country of Denmark will take you on a tour through the most fundamental disciplines of wind energy research such as wind measurements and resource assessment, aerodynamics, wind turbine technology, structural mechanics, materials, financial and electrical systems. \n\nYou will gain a rational understanding of wind energy engineering and, through hands-on exercises, you will learn to perform wind energy calculations based on simple models. Working with the different course disciplines will give you a taste of what wind energy engineering is all about. This allows you to identify the most interesting or relevant aspects of wind energy engineering to be pursued in your future studies or in your professional career.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 13,
+      "title": "Data Science Math Skills",
+      "description": "Data science courses contain math—no avoiding that! This course is designed to teach learners the basic math you will need in order to be successful in almost any data science math course and was created for learners who have basic math skills but may not have taken algebra or pre-calculus. Data Science Math Skills introduces the core math that data science is built upon, with no extra complexity, introducing unfamiliar ideas and math symbols one-at-a-time. \n\nLearners who complete this course will master the vocabulary, notation, concepts, and algebra rules that all data scientists must know before moving on to more advanced material.\n\nTopics include:\n~Set theory, including Venn diagrams\n~Properties of the real number line\n~Interval notation and algebra with inequalities\n~Uses for summation and Sigma notation\n~Math on the Cartesian (x,y) plane, slope and distance formulas\n~Graphing and describing functions and their inverses on the x-y plane,\n~The concept of instantaneous rate of change and tangent lines to a curve\n~Exponents, logarithms, and the natural log function.\n~Probability theory, including Bayes’ theorem.\n\nWhile this course is intended as a general introduction to the math skills needed for data science, it can be considered a prerequisite for learners interested in the course, \"Mastering Data Analysis in Excel,\" which is part of the Excel to MySQL Data Science Specialization.  Learners who master Data Science Math Skills will be fully prepared for success with the more advanced math concepts introduced in \"Mastering Data Analysis in Excel.\" \n\nGood luck and we hope you enjoy the course!",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 14,
+      "title": "Introduction to User Experience Design",
+      "description": "The focus of this course is to introduce the learner to User Experience (UX) Design\n\nUser Experience design is design that is user centered. The goal is to design artifacts that allow the users to meet their needs in the most effective efficient and satisfying manner. The course introduces the novice to a cycle of discovery and evaluation and a set of techniques that meet the user's needs.\n\nThis course is geared toward the novice. It is for learners that have heard about \"user experience\" or \"user interface\" design but don't really know much about these disciplines.\n\nThe course mantra is that “Design is a systematic and data driven process.” Design is systematic because it is based on a set of techniques and also on a cycle of discovery.\n\nIn this course the learner is introduced to the four step user interface design cycle. Along the way learners are exposed to a set of techniques to gather information about a) what the user needs b)how to design and model interfaces based on these and then how to evaluate the design to ascertain that the user's goals are met. These techniques are tools that are used in a standardized manner and give us the data we use in our design.\n\nThis means that anyone (regardless of their current training) that is willing to learn these techniques and follow the proposed cycle can be a UX designer!",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 15,
+      "title": "Astronomy: Exploring Time and Space",
+      "description": "This course is designed for anyone who is interested in learning more about modern astronomy. We will help you get up to date on the most recent astronomical discoveries while also providing support at an introductory level for those who have no background in science.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 16,
+      "title": "Information Security: Context and Introduction",
+      "description": "In this course you will explore information security through some introductory material and gain an appreciation of the scope and context around the subject. This includes a brief introduction to cryptography, security management and network and computer security that allows you to begin the journey into the study of information security and develop your appreciation of some key information security concepts.\n\nThe course concludes with a discussion around a simple model of the information security industry and explores skills, knowledge and roles so that you can determine and analyse potential career opportunities in this developing profession and consider how you may need to develop personally to attain your career goals. \n\nAfter completing the course you will have gained an awareness of key information security principles regarding information, confidentiality, integrity and availability. You will be able to explain some of the key aspects of information risk and security management, in addition, summarise some of the key aspects in computer and network security, including some appreciation of threats, attacks, exploits and vulnerabilities. You will also gain an awareness of some of the skills, knowledge and roles/careers opportunities within the information security industry.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 17,
+      "title": "English for Science, Technology, Engineering, and Mathematics",
+      "description": "Welcome to English for Science, Technology, Engineering, and Mathematics, a course created by the University of Pennsylvania, and funded by the U.S. Department of State Bureau of Educational and Cultural Affairs, Office of English Language Programs.  \n\nTo enroll in this course for free, click on “Enroll now” and then select \"Full Course.  No certificate.\" If you want to get a Coursera Verified Certificate for free, please fill out the Financial Aid form.\n\nThis course is designed for non-native English speakers who are interested in improving their English skills in the sciences. In this course, you will explore some of the most innovative areas of scientific study, while expanding your vocabulary and the language skills needed to share scientific information within your community. In unit 1, you will learn how to preview texts and practice some of the language used to make comparisons when talking about global warming and climate change. In unit 2, you will examine the chemistry of climate change and the language of cause and effect. In Unit 3, you will learn about some of the impacts of Climate Change and the language used to describe these effects. In Unit 4, you will learn reading strategies that can help you explore the science behind some new energy systems. In the final unit, you will investigate practical advances in Nanotechnology that help slow down climate change, while developing your own research skills in English.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 18,
+      "title": "Write A Feature Length Screenplay For Film Or Television",
+      "description": "In this course, you will write a complete, feature-length screenplay for film or television, be it a serious drama or romantic comedy or anything in between. You’ll learn to break down the creative process into components, and you’ll discover a structured process that allows you to produce a polished and pitch-ready script by the end of the course. Completing this project will increase your confidence in your ideas and abilities, and you’ll feel prepared to pitch your first script and get started on your next. This is a course designed to tap into your creativity and is based in \"Active Learning\". Most of the actual learning takes place within your own activities - that is, writing! You will learn by doing.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 19,
+      "title": "Fundamentals of Music Theory",
+      "description": "This course will introduce students to the theory of music, providing them with the skills needed to read and write Western music notation, as well as to understand, analyse, and listen informedly. It will cover material such as pitches and scales, intervals, clefs, rhythm, form, meter, phrases and cadences, and basic harmony.\n\nThis course covers the fundamentals of Western music theory, from the absolute basics to some more advanced concepts and, as such, is the perfect course for beginners and more experienced musicians alike.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 20,
+      "title": "Process Mining: Data science in Action",
+      "description": "Process mining is the missing link between model-based process analysis and data-oriented analysis techniques. Through concrete data sets and easy to use software the course provides data science knowledge that can be applied directly to analyze and improve processes in a variety of domains.\n\nData science is the profession of the future, because organizations that are unable to use (big) data in a smart way will not survive. It is not sufficient to focus on data storage and data analysis. The data scientist also needs to relate data to process analysis. Process mining bridges the gap between traditional model-based process analysis (e.g., simulation and other business process management techniques) and data-centric analysis techniques such as machine learning and data mining. Process mining seeks the confrontation between event data (i.e., observed behavior) and process models (hand-made or discovered automatically). This technology has become available only recently, but it can be applied to any type of operational processes (organizations and systems). Example applications include: analyzing treatment processes in hospitals, improving customer service processes in a multinational, understanding the browsing behavior of customers using booking site, analyzing failures of a baggage handling system, and improving the user interface of an X-ray machine. All of these applications have in common that dynamic behavior needs to be related to process models. Hence, we refer to this as \"data science in action\".\n\nThe course explains the key analysis techniques in process mining. Participants will learn various process discovery algorithms. These can be used to automatically learn process models from raw event data. Various other process analysis techniques that use event data will be presented. Moreover, the course will provide easy-to-use software, real-life data sets, and practical skills to directly apply the theory in a variety of application domains.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 21,
+      "title": "C for Everyone: Programming Fundamentals",
+      "description": "This course is for everyone. In the new world we live in, coding is a universally valuable skill, whether you're a scientist, artist, or a humanist. Algorithms are everywhere, and we all have to understand how they work. The C language is particularly well suited as an introduction to coding: It's a tried-and-true language, and it allows you to understand computing processes at a deep level. ",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 22,
+      "title": "From the Big Bang to Dark Energy",
+      "description": "We have learned a lot recently about how the Universe evolved in 13.7 billion years since the Big Bang. More than 80% of matter in the Universe is mysterious Dark Matter, which made stars and galaxies to form. The newly discovered Higgs-boson became frozen into the Universe a trillionth of a second after the Big Bang and brought order to the Universe. Yet we still do not know how ordinary matter (atoms) survived against total annihilation by Anti-Matter. The expansion of the Universe started acceleration about 7 billion years ago and the Universe is being ripped apart. The culprit is Dark Energy, a mysterious energy multiplying in vacuum. I will present evidence behind these startling discoveries and discuss what we may learn in the near future.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 23,
+      "title": "Introduction to Game Development",
+      "description": "In a quest to understand how video games themselves are implemented, you'll explore the design of such childhood games as: Super Mario Bros., Pong, Flappy Bird, Breakout, Match 3, Legend of Zelda, Angry Birds, Pokémon, 3D Helicopter Game, Dreadhalls, and Portal.\n\nVia lectures and hands-on projects, the course explores principles of 2D and 3D graphics, animation, sound, and collision detection using frameworks like Unity and LÖVE 2D, as well as languages like Lua and C#. By class’s end, you'll have programmed several of your own games and gained a thorough understanding of the basics of game design and development.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 24,
+      "title": "Mobile App Development with React Native",
+      "description": "This course picks up where CS50 leaves off, transitioning from web development to mobile app development with React Native.\n\nThe course introduces you to modern JavaScript (including ES6 and ES7) as well as to JSX, a JavaScript extension. Through hands-on projects, you'll gain experience with React and its paradigms, app architecture, and user interfaces. The course culminates in a final project for which you'll implement an app entirely of your own design.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 25,
+      "title": "Web Programming with Python and JavaScript",
+      "description": "Topics include database design, scalability, security, and user experience. Through hands-on projects, you'll learn to write and use APIs, create interactive UIs, and leverage cloud services like GitHub and Heroku. By course's end, you'll emerge with knowledge and experience in principles, languages, and tools that empower you to design and deploy applications on the Internet.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 26,
+      "title": "Pyramids of Giza: Ancient Egyptian Art and Archaeology",
+      "description": "Where is Giza? How were the Pyramids built? How did the cemeteries and hundreds of decorated tombs around them develop? What was Giza’s contribution to this first great age of ancient Egyptian civilization, the Old Kingdom?\n\nThe Giza Plateau and its cemeteries — including the majestic Pyramids and the Great Sphinx — are stirring examples of ancient Egyptian architecture and culture. They provide windows into ancient Egyptian society, but also contain mysteries waiting to be solved. The Egyptian Pyramids at Giza provide an opportunity to explore the history of archaeology and to learn about some of the modern methods shaping the discipline today.\n\nThis introductory course will explore the art, archaeology, and history surrounding the Giza Pyramids. We will learn about Egyptian pharaohs and high officials of the Pyramid Age, follow in the footsteps of the great 20th-century expeditions, and discover how cutting-edge digital tools like 3D-modeling are reshaping the discipline of Egyptology.\n\nJoin us on this online journey to ancient Egypt’s most famous archaeological site as we uncover the history and significance of Giza, and use new digital techniques to unravel the mysteries of its ancient tombs and temples.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 27,
+      "title": "Modern Masterpieces of World Literature",
+      "description": "Based on the second half of the Masterpieces of World Literature edX MOOC, this short literature course examines how writers reach beyond national and linguistic boundaries as worldly readers and travelers, and how their modern fictions rise to the status of world literature.\n\nThese masterpieces of modern world literature take part in a tradition of weaving small stories into ambitious projects—one that reaches back to medieval tales and extends forward to contemporary novels. Throughout the course, you will learn how these writers use their fictions to engage directly with the political and social concerns of their present and of a globalized modernity, relating experiences of exploration, migration, international conflict, and cultural exchange.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 28,
+      "title": "Introduction to Artificial Intelligence with Python",
+      "description": "AI is transforming how we live, work, and play. By enabling new technologies like self-driving cars and recommendation systems or improving old ones like medical diagnostics and search engines, the demand for expertise in AI and machine learning is growing rapidly. This course will enable you to take the first step toward solving important real-world problems and future-proofing your career.\n\nCS50’s Introduction to Artificial Intelligence with Python explores the concepts and algorithms at the foundation of modern artificial intelligence, diving into the ideas that give rise to technologies like game-playing engines, handwriting recognition, and machine translation. Through hands-on projects, students gain exposure to the theory behind graph search algorithms, classification, optimization, reinforcement learning, and other topics in artificial intelligence and machine learning as they incorporate them into their own Python programs. By course’s end, students emerge with experience in libraries for machine learning as well as knowledge of artificial intelligence principles that enable them to design intelligent systems of their own.\n\nEnroll now to gain expertise in one of the fastest-growing domains of computer science from the creators of one of the most popular computer science courses ever, CS50. You’ll learn the theoretical frameworks that enable these new technologies while gaining practical experience in how to apply these powerful techniques in your work.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 29,
+      "title": "Machine Learning",
+      "description": "Perhaps the most popular data science methodologies come from machine learning. What distinguishes machine learning from other computer guided decision processes is that it builds prediction algorithms using data. Some of the most popular products that use machine learning include the handwriting readers implemented by the postal service, speech recognition, movie recommendation systems, and spam detectors.\n\nIn this course, part of our Professional Certificate Program in Data Science, you will learn popular machine learning algorithms, principal component analysis, and regularization by building a movie recommendation system.\n\nYou will learn about training data, and how to use a set of data to discover potentially predictive relationships. As you build the movie recommendation system, you will learn how to train algorithms using training data so you can predict the outcome for future datasets. You will also learn about overtraining and techniques to avoid it such as cross-validation. All of these skills are fundamental to machine learning.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 30,
+      "title": "Visualization",
+      "description": "As part of our Professional Certificate Program in Data Science, this course covers the basics of data visualization and exploratory data analysis. We will use three motivating examples and ggplot2, a data visualization package for the statistical programming language R. We will start with simple datasets and then graduate to case studies about world health, economics, and infectious disease trends in the United States.\n\nWe’ll also be looking at how mistakes, biases, systematic errors, and other unexpected problems often lead to data that should be handled with care. The fact that it can be difficult or impossible to notice a mistake within a dataset makes data visualization particularly important.\n\nThe growing availability of informative datasets and software tools has led to increased reliance on data visualizations across many areas. Data visualization provides a powerful way to communicate data-driven findings, motivate analyses, and detect flaws. This course will give you the skills you need to leverage data to reveal valuable insights and advance your career.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 31,
+      "title": "Linear Regression",
+      "description": "Linear regression is commonly used to quantify the relationship between two or more variables. It is also used to adjust for confounding. This course, part of our Professional Certificate Program in Data Science, covers how to implement linear regression and adjust for confounding in practice using R.\n\nIn data science applications, it is very common to be interested in the relationship between two or more variables. The motivating case study we examine in this course relates to the data-driven approach used to construct baseball teams described in Moneyball. We will try to determine which measured outcomes best predict baseball runs by using linear regression.\n\nWe will also examine confounding, where extraneous variables affect the relationship between two or more other variables, leading to spurious associations. Linear regression is a powerful technique for removing confounders, but it is not a magical process. It is essential to understand when it is appropriate to use, and this course will teach you when to apply this technique.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }, {
+      "id": 32,
+      "title": "Capstone",
+      "description": "To become an expert data scientist you need practice and experience. By completing this capstone project you will get an opportunity to apply the knowledge and skills in R data analysis that you have gained throughout the series. This final project will test your skills in data visualization, probability, inference and modeling, data wrangling, data organization, regression, and machine learning.\n\nUnlike the rest of our Professional Certificate Program in Data Science, in this course, you will receive much less guidance from the instructors. When you complete the project you will have a data product to show off to potential employers or educational programs, a strong indicator of your expertise in the field of data science.",
+      "datePublished": "",
+      "rating": 0,
+      "imageUrl":""
+    }
+  ],
+  "reviews": {
+    "id": 1,
+    "courseId": 1,
+    "userId": 1,
+    "score": 5
+  }
+}
