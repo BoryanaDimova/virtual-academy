@@ -2,10 +2,11 @@
   "users": [
     {
       "id": 1,
-      "password": "adminpass",
       "firstName": "Admin",
       "lastName": "Admin",
-      "email": "admin@admin.com"
+      "email": "admin@admin.com",
+      "password": "admin@Pass1",
+      "isBlocked": false
     }
   ],
   "courses": [
@@ -13,235 +14,319 @@
       "id": 1,
       "title": "Machine Learning",
       "description": "Machine learning is the science of getting computers to act without being explicitly programmed. In the past decade, machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome. Machine learning is so pervasive today that you probably use it dozens of times a day without knowing it. Many researchers also think it is the best way to make progress towards human-level AI. In this class, you will learn about the most effective machine learning techniques, and gain practice implementing them and getting them to work for yourself. More importantly, you'll learn about not only the theoretical underpinnings of learning, but also gain the practical know-how needed to quickly and powerfully apply these techniques to new problems. Finally, you'll learn about some of Silicon Valley's best practices in innovation as it pertains to machine learning and AI.\n\nThis course provides a broad introduction to machine learning, datamining, and statistical pattern recognition. Topics include: (i) Supervised learning (parametric/non-parametric algorithms, support vector machines, kernels, neural networks). (ii) Unsupervised learning (clustering, dimensionality reduction, recommender systems, deep learning). (iii) Best practices in machine learning (bias/variance theory; innovation process in machine learning and AI). The course will also draw from numerous case studies and applications, so that you'll also learn how to apply learning algorithms to building smart robots (perception, control), text understanding (web search, anti-spam), computer vision, medical informatics, audio, database mining, and other areas.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
+      "datePublished": "2020-05-01",
+      "ratingsSum": 6,
+      "imageUrl": "https://miro.medium.com/max/1024/1*k5LiTi5lt_ND02kaBT_SAA.jpeg",
+      "ratingsCount": 1
     },
     {
       "id": 2,
       "title": "Modern Art & Ideas",
       "description": "Welcome to Modern Art & Ideas! This course is designed for anyone interested in learning more about modern and contemporary art. Over the next five weeks, you will look at art through a variety of themes: Places & Spaces, Art & Identity, Transforming Everyday Objects, and Art & Society. Each week kicks off with a video that connects works of art from The Museum of Modern Art’s collection to the theme. You will hear audio interviews with artists, designers, and curators and learn more about selected works in the additional readings and resources.\n\nThroughout this course you will discover how artists:\n-- represent place and take inspiration from their environment,\n-- create works of art to express, explore, and question identity,\n-- use everyday objects to challenge assumptions about what constitutes a work of art and how it should be made,\n-- and respond to the social, cultural, and political issues of their time through works of art.\n\nThrough the discussion forum prompts and peer review assignment, you will also have the opportunity to connect with other learners and explore how these themes resonate with your own life and experience.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    } ,
+      "datePublished": "2020-05-02",
+      "ratingsSum": 0,
+      "imageUrl": "https://mymodernmet.com/wp/wp-content/uploads/2017/10/modern-art-van-gogh-starry-night-thumbnail.jpg",
+      "ratingsCount": 0
+    },
     {
       "id": 3,
       "title": "Learning to Teach Online",
       "description": "Are you an educator? Have you ever wanted to understand more about how to design your class to make better use of educational technology – whether fully online or in blended contexts? Would you like to learn from those who have extensive practical experience with online technologies? \n\nThe Learning to Teach Online (LTTO) MOOC will help you develop a working understanding of successful online teaching strategies that you can apply in your own practice. The course is based upon the multi award winning open educational resource developed by Dr Simon McIntyre and Karin Watson. \n\nIntegrating online technologies into your teaching can be a challenging prospect, and it can be difficult to know how to approach it effectively for the benefit of both students and yourself. No one knows your own content and teaching strengths better than you, and the “one size fits all” formula doesn’t always suit everyone. No matter what type of technology you are interested in exploring or your level of experience, this course will help you draw on your teaching strengths and find the approach that is right for you, your students and your educational context. \n\nThis course will guide you through your journey of understanding how online technologies can enhance your course design. You will have the opportunity to develop your understanding of effective online teaching practices and their relationship to the use of different technologies. You will also be encouraged to progressively design and reflect upon your own online learning activity, assessment or resource for use in your own class if you choose to undertake the course assignments. ",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
+      "datePublished": "2020-05-03",
+      "ratingsSum": 0,
+      "imageUrl": "https://i.pinimg.com/originals/33/0a/c0/330ac0efa1fe7e892edaccd983b8c473.jpg",
+      "ratingsCount": 0
     },
     {
       "id": 4,
       "title": "Game Theory",
       "description": "Popularized by movies such as \"A Beautiful Mind,\" game theory is the mathematical modeling of strategic interaction among rational (and irrational) agents. Beyond what we call `games' in common language, such as chess, poker, soccer, etc., it includes the modeling of conflict among nations, political campaigns, competition among firms, and trading behavior in markets such as the NYSE. How could you begin to model keyword auctions, and peer to peer file-sharing networks, without accounting for the incentives of the people using them? The course will provide the basics: representing games and strategies, the extensive form (which computer scientists call game trees), Bayesian games (modeling things like auctions), repeated and stochastic games, and more. We'll include a variety of examples including classic games and a few applications.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-03",
+      "ratingsSum": 0,
+      "imageUrl": "https://miro.medium.com/max/800/1*F5mjzSrpMkdrv6oVAEqqwg.jpeg",
+      "ratingsCount": 0
+    },
+    {
       "id": 5,
       "title": "English for Career Development",
       "description": "This course is designed for non-native English speakers who are interested in advancing their careers in the global marketplace.  In this course, you will learn about the job search, application, and interview process in the United States, while comparing and contrasting the same process in your home country. This course will also give you the opportunity to explore your global career path, while building your vocabulary and improving your language skills to achieve your professional goals. The first unit in this course will introduce the U.S. job application process and provide strategies for identifying the jobs that match your interests and skills. Unit 2 will take you through the steps necessary to produce a professional-looking resume. In unit 3, you will work to develop a clear and concise cover letter. The final unit of the course focuses on networking and interview skills.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-04",
+      "ratingsSum": 0,
+      "imageUrl": "https://pbs.twimg.com/media/C8T7I9ZXYAAoHnA.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 6,
       "title": "Managing the Company of the Future",
       "description": "The aim of the course is to provide you with a comprehensive framework for understanding both the traditional principles of management inside companies today as well as the alternative principles that are becoming increasingly important. It provides both theoretical and practical perspectives on the nature of management in today’s organisations.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-04",
+      "ratingsSum": 0,
+      "imageUrl": "https://preptube.in/bytes/wp-content/uploads/2019/01/Business-Management-emerges-as-preferred-course-by-Indian-students-to-study-abroad-Study-by-Pearson-696x325.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 7,
       "title": "Understanding Research Methods",
       "description": "This MOOC is about demystifying research and research methods. It will outline the fundamentals of doing research, aimed primarily, but not exclusively, at the postgraduate level. It places the student experience at the centre of our endeavours by engaging learners in a range of robust and challenging discussions and exercises befitting SOAS, University of London's status as a research-intensive university and its rich research heritage.\n\nThe course will appeal to those of you who require an understanding of research approaches and skills, and importantly an ability to deploy them in your studies or in your professional lives. In particular, this course will aid those of you who have to conduct research as part of your postgraduate studies but do not perhaps have access to research methods courses, or for those of you who feel you would like additional support for self-improvement. No prior knowledge or experience in research is required to take this course and as such, the course is for everyone. ",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-04",
+      "ratingsSum": 0,
+      "imageUrl": "data:image/jpeg;base64,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",
+      "ratingsCount": 0
+    },
+    {
       "id": 8,
       "title": "Cryptography I",
       "description": "Cryptography is an indispensable tool for protecting information in computer systems. In this course you will learn the inner workings of cryptographic systems and how to correctly use them in real-world applications. The course begins with a detailed discussion of how two parties who have a shared secret key can communicate securely when a powerful adversary eavesdrops and tampers with traffic. We will examine many deployed protocols and analyze mistakes in existing systems. The second half of the course discusses public-key techniques that let two parties generate a shared secret key. Throughout the course participants will be exposed to many exciting open problems in the field and work on fun (optional) programming projects. In a second course (Crypto II) we will cover more advanced cryptographic tasks such as zero-knowledge, privacy mechanisms, and other forms of encryption.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-05",
+      "ratingsSum": 0,
+      "imageUrl": "https://geekboots.sfo2.cdn.digitaloceanspaces.com/post/cryptography-1567139143810.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 9,
       "title": "Greek and Roman Mythology",
       "description": "Myths are traditional stories that have endured over a long time. Some of them have to do with events of great importance, such as the founding of a nation. Others tell the stories of great heroes and heroines and their exploits and courage in the face of adversity. Still others are simple tales about otherwise unremarkable people who get into trouble or do some great deed. What are we to make of all these tales, and why do people seem to like to hear them? This course will focus on the myths of ancient Greece and Rome, as a way of exploring the nature of myth and the function it plays for individuals, societies, and nations. We will also pay some attention to the way the Greeks and Romans themselves understood their own myths. Are myths subtle codes that contain some universal truth? Are they a window on the deep recesses of a particular culture? Are they a set of blinders that all of us wear, though we do not realize it? Or are they just entertaining stories that people like to tell over and over? This course will investigate these questions through a variety of topics, including the creation of the universe, the relationship between gods and mortals, human nature, religion, the family, sex, love, madness, and death.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-06",
+      "ratingsSum": 0,
+      "imageUrl": "https://scontent.fsof1-1.fna.fbcdn.net/v/t1.0-9/69926157_2397911246953226_7488459386780647424_n.png?_nc_cat=102&_nc_sid=dd9801&_nc_ohc=TyqOxIk8PlAAX84QAUF&_nc_ht=scontent.fsof1-1.fna&oh=fb2fd8f2a62752151f9772a1421956ec&oe=5EF9FDC0",
+      "ratingsCount": 0
+    },
+    {
       "id": 10,
       "title": "Creative Thinking: Techniques and Tools for Success",
       "description": "In today’s ever-growing and changing world, being able to think creatively and innovatively are essential skills. It can sometimes be challenging to step back and reflect in an environment which is fast paced or when you are required to assimilate large amounts of information. Making sense of or communicating new ideas in an innovative and engaging way, approaching problems from fresh angles, and producing novel solutions are all traits which are highly sought after by employers.\n\nThis course will equip you with a ‘tool-box’, introducing you to a selection of behaviours and techniques that will augment your innate creativity. Some of the tools are suited to use on your own and others work well for a group, enabling you to leverage the power of several minds.  You can pick and choose which of these tools or techniques suit your needs and interests, focusing on some or all of the selected approaches and in the order that fits best for you. The greatest innovators aren’t necessarily the people who have the most original idea. Often, they are people- or teams- that have harnessed their creativity to develop a new perspective or more effective way of communicating an idea. You can train your imagination to seize opportunities, break away from routine and habit, and tap into your natural creativity.\n\nJoin this course and our community of practitioners in CREATIVITY!",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-08",
+      "ratingsSum": 0,
+      "imageUrl": "https://www.imperial.ac.uk/ImageCropToolT4/imageTool/uploaded-images/Screenshot-2019-06-24-at-13-49-16--tojpeg_1561381173017_x1.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 11,
       "title": "Introduction to Programming with MATLAB",
       "description": "This course teaches computer programming to those with little to no previous experience. It uses the programming system and language called MATLAB to do so because it is easy to learn, versatile and very useful for engineers and other professionals. MATLAB is a special-purpose language that is an excellent choice for writing moderate-size programs that solve problems involving the manipulation of numbers. The design of the language makes it possible to write a powerful program in a few lines. The problems may be relatively complex, while the MATLAB programs that solve them are relatively simple: relative, that is, to the equivalent program written in a general-purpose language, such as C++ or Java. As a result, MATLAB is being used in a wide variety of domains from the natural sciences, through all disciplines of engineering, to finance, and beyond, and it is heavily used in industry. Hence, a solid background in MATLAB is an indispensable skill in today’s job market.\n\nNevertheless, this course is not a MATLAB tutorial. It is an introductory programming course that uses MATLAB to illustrate general concepts in computer science and programming. Students who successfully complete this course will become familiar with general concepts in computer science, gain an understanding of the general concepts of programming, and obtain a solid foundation in the use of MATLAB.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-10",
+      "ratingsSum": 0,
+      "imageUrl": "https://tudublin.ie/media/website/news/2019/main-news/Matlab-Main-Image.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 12,
       "title": "Wind Energy",
       "description": "How tall is a modern wind turbine and how can it possibly generate power from the wind? This course gives an overview of key aspects in wind energy engineering. Whether you are looking for general insight in this green technology or your ambition is to pursue a career in wind energy engineering, 'Wind Energy' is an excellent starting point. \n\nExperts located in the wind pioneering country of Denmark will take you on a tour through the most fundamental disciplines of wind energy research such as wind measurements and resource assessment, aerodynamics, wind turbine technology, structural mechanics, materials, financial and electrical systems. \n\nYou will gain a rational understanding of wind energy engineering and, through hands-on exercises, you will learn to perform wind energy calculations based on simple models. Working with the different course disciplines will give you a taste of what wind energy engineering is all about. This allows you to identify the most interesting or relevant aspects of wind energy engineering to be pursued in your future studies or in your professional career.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-12",
+      "ratingsSum": 0,
+      "imageUrl": "https://i1.wp.com/honestproscons.com/wp-content/uploads/2019/12/ADVANTAGES-AND-DISADVANTAGES-OF-WIND-ENERGY.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 13,
       "title": "Data Science Math Skills",
       "description": "Data science courses contain math—no avoiding that! This course is designed to teach learners the basic math you will need in order to be successful in almost any data science math course and was created for learners who have basic math skills but may not have taken algebra or pre-calculus. Data Science Math Skills introduces the core math that data science is built upon, with no extra complexity, introducing unfamiliar ideas and math symbols one-at-a-time. \n\nLearners who complete this course will master the vocabulary, notation, concepts, and algebra rules that all data scientists must know before moving on to more advanced material.\n\nTopics include:\n~Set theory, including Venn diagrams\n~Properties of the real number line\n~Interval notation and algebra with inequalities\n~Uses for summation and Sigma notation\n~Math on the Cartesian (x,y) plane, slope and distance formulas\n~Graphing and describing functions and their inverses on the x-y plane,\n~The concept of instantaneous rate of change and tangent lines to a curve\n~Exponents, logarithms, and the natural log function.\n~Probability theory, including Bayes’ theorem.\n\nWhile this course is intended as a general introduction to the math skills needed for data science, it can be considered a prerequisite for learners interested in the course, \"Mastering Data Analysis in Excel,\" which is part of the Excel to MySQL Data Science Specialization.  Learners who master Data Science Math Skills will be fully prepared for success with the more advanced math concepts introduced in \"Mastering Data Analysis in Excel.\" \n\nGood luck and we hope you enjoy the course!",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-15",
+      "ratingsSum": 0,
+      "imageUrl": "https://i1.wp.com/ictkerala.org/wp-content/uploads/2018/12/DATA-SCIENCE-768x384.png?ssl=1",
+      "ratingsCount": 0
+    },
+    {
       "id": 14,
       "title": "Introduction to User Experience Design",
       "description": "The focus of this course is to introduce the learner to User Experience (UX) Design\n\nUser Experience design is design that is user centered. The goal is to design artifacts that allow the users to meet their needs in the most effective efficient and satisfying manner. The course introduces the novice to a cycle of discovery and evaluation and a set of techniques that meet the user's needs.\n\nThis course is geared toward the novice. It is for learners that have heard about \"user experience\" or \"user interface\" design but don't really know much about these disciplines.\n\nThe course mantra is that “Design is a systematic and data driven process.” Design is systematic because it is based on a set of techniques and also on a cycle of discovery.\n\nIn this course the learner is introduced to the four step user interface design cycle. Along the way learners are exposed to a set of techniques to gather information about a) what the user needs b)how to design and model interfaces based on these and then how to evaluate the design to ascertain that the user's goals are met. These techniques are tools that are used in a standardized manner and give us the data we use in our design.\n\nThis means that anyone (regardless of their current training) that is willing to learn these techniques and follow the proposed cycle can be a UX designer!",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-16",
+      "ratingsSum": 0,
+      "imageUrl": "https://jamiejakov.lv/wp-content/uploads/2017/06/ux.png",
+      "ratingsCount": 0
+    },
+    {
       "id": 15,
       "title": "Astronomy: Exploring Time and Space",
       "description": "This course is designed for anyone who is interested in learning more about modern astronomy. We will help you get up to date on the most recent astronomical discoveries while also providing support at an introductory level for those who have no background in science.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-16",
+      "ratingsSum": 0,
+      "imageUrl": "https://stuvera.com/wp-content/uploads/2018/07/astronomy-exploring-time-and-space.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 16,
       "title": "Information Security: Context and Introduction",
       "description": "In this course you will explore information security through some introductory material and gain an appreciation of the scope and context around the subject. This includes a brief introduction to cryptography, security management and network and computer security that allows you to begin the journey into the study of information security and develop your appreciation of some key information security concepts.\n\nThe course concludes with a discussion around a simple model of the information security industry and explores skills, knowledge and roles so that you can determine and analyse potential career opportunities in this developing profession and consider how you may need to develop personally to attain your career goals. \n\nAfter completing the course you will have gained an awareness of key information security principles regarding information, confidentiality, integrity and availability. You will be able to explain some of the key aspects of information risk and security management, in addition, summarise some of the key aspects in computer and network security, including some appreciation of threats, attacks, exploits and vulnerabilities. You will also gain an awareness of some of the skills, knowledge and roles/careers opportunities within the information security industry.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-17",
+      "ratingsSum": 0,
+      "imageUrl": "https://arizent.brightspotcdn.com/dims4/default/b91e633/2147483647/strip/true/crop/510x345+0+0/resize/510x345!/quality/90/?url=https%3A%2F%2Farizent.brightspotcdn.com%2F36%2Fd6%2F70c8c2344d05bb1b7fc4f8eca371%2Finformation-security.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 17,
       "title": "English for Science, Technology, Engineering, and Mathematics",
       "description": "Welcome to English for Science, Technology, Engineering, and Mathematics, a course created by the University of Pennsylvania, and funded by the U.S. Department of State Bureau of Educational and Cultural Affairs, Office of English Language Programs.  \n\nTo enroll in this course for free, click on “Enroll now” and then select \"Full Course.  No certificate.\" If you want to get a Coursera Verified Certificate for free, please fill out the Financial Aid form.\n\nThis course is designed for non-native English speakers who are interested in improving their English skills in the sciences. In this course, you will explore some of the most innovative areas of scientific study, while expanding your vocabulary and the language skills needed to share scientific information within your community. In unit 1, you will learn how to preview texts and practice some of the language used to make comparisons when talking about global warming and climate change. In unit 2, you will examine the chemistry of climate change and the language of cause and effect. In Unit 3, you will learn about some of the impacts of Climate Change and the language used to describe these effects. In Unit 4, you will learn reading strategies that can help you explore the science behind some new energy systems. In the final unit, you will investigate practical advances in Nanotechnology that help slow down climate change, while developing your own research skills in English.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-18",
+      "ratingsSum": 0,
+      "imageUrl": "https://previews.123rf.com/images/trueffelpix/trueffelpix1706/trueffelpix170600018/81135335-banner-stem-concept-science-technology-engineering-mathematics-education-word-with-icons.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 18,
       "title": "Write A Feature Length Screenplay For Film Or Television",
       "description": "In this course, you will write a complete, feature-length screenplay for film or television, be it a serious drama or romantic comedy or anything in between. You’ll learn to break down the creative process into components, and you’ll discover a structured process that allows you to produce a polished and pitch-ready script by the end of the course. Completing this project will increase your confidence in your ideas and abilities, and you’ll feel prepared to pitch your first script and get started on your next. This is a course designed to tap into your creativity and is based in \"Active Learning\". Most of the actual learning takes place within your own activities - that is, writing! You will learn by doing.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-19",
+      "ratingsSum": 0,
+      "imageUrl": "https://www.power-publishers.com/wp-content/uploads/2018/04/Screenplay-Writing-1.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 19,
       "title": "Fundamentals of Music Theory",
       "description": "This course will introduce students to the theory of music, providing them with the skills needed to read and write Western music notation, as well as to understand, analyse, and listen informedly. It will cover material such as pitches and scales, intervals, clefs, rhythm, form, meter, phrases and cadences, and basic harmony.\n\nThis course covers the fundamentals of Western music theory, from the absolute basics to some more advanced concepts and, as such, is the perfect course for beginners and more experienced musicians alike.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-19",
+      "ratingsSum": 0,
+      "imageUrl": "https://i.ytimg.com/vi/re4Rx0j2eMI/hqdefault.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 20,
       "title": "Process Mining: Data science in Action",
       "description": "Process mining is the missing link between model-based process analysis and data-oriented analysis techniques. Through concrete data sets and easy to use software the course provides data science knowledge that can be applied directly to analyze and improve processes in a variety of domains.\n\nData science is the profession of the future, because organizations that are unable to use (big) data in a smart way will not survive. It is not sufficient to focus on data storage and data analysis. The data scientist also needs to relate data to process analysis. Process mining bridges the gap between traditional model-based process analysis (e.g., simulation and other business process management techniques) and data-centric analysis techniques such as machine learning and data mining. Process mining seeks the confrontation between event data (i.e., observed behavior) and process models (hand-made or discovered automatically). This technology has become available only recently, but it can be applied to any type of operational processes (organizations and systems). Example applications include: analyzing treatment processes in hospitals, improving customer service processes in a multinational, understanding the browsing behavior of customers using booking site, analyzing failures of a baggage handling system, and improving the user interface of an X-ray machine. All of these applications have in common that dynamic behavior needs to be related to process models. Hence, we refer to this as \"data science in action\".\n\nThe course explains the key analysis techniques in process mining. Participants will learn various process discovery algorithms. These can be used to automatically learn process models from raw event data. Various other process analysis techniques that use event data will be presented. Moreover, the course will provide easy-to-use software, real-life data sets, and practical skills to directly apply the theory in a variety of application domains.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-20",
+      "ratingsSum": 0,
+      "imageUrl": "https://d24x5qendt1bag.cloudfront.net/uploads/2018/08/14092327/ProcessGold-1024x576.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 21,
       "title": "C for Everyone: Programming Fundamentals",
       "description": "This course is for everyone. In the new world we live in, coding is a universally valuable skill, whether you're a scientist, artist, or a humanist. Algorithms are everywhere, and we all have to understand how they work. The C language is particularly well suited as an introduction to coding: It's a tried-and-true language, and it allows you to understand computing processes at a deep level. ",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-20",
+      "ratingsSum": 0,
+      "imageUrl": "https://miro.medium.com/max/900/1*0jQ95pDsZC2o6Yo_nLaSaQ.jpeg",
+      "ratingsCount": 0
+    },
+    {
       "id": 22,
       "title": "From the Big Bang to Dark Energy",
       "description": "We have learned a lot recently about how the Universe evolved in 13.7 billion years since the Big Bang. More than 80% of matter in the Universe is mysterious Dark Matter, which made stars and galaxies to form. The newly discovered Higgs-boson became frozen into the Universe a trillionth of a second after the Big Bang and brought order to the Universe. Yet we still do not know how ordinary matter (atoms) survived against total annihilation by Anti-Matter. The expansion of the Universe started acceleration about 7 billion years ago and the Universe is being ripped apart. The culprit is Dark Energy, a mysterious energy multiplying in vacuum. I will present evidence behind these startling discoveries and discuss what we may learn in the near future.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-22",
+      "ratingsSum": 0,
+      "imageUrl": "https://maggiesscienceconnection.weebly.com/uploads/5/1/0/5/5105330/_145973778.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 23,
       "title": "Introduction to Game Development",
       "description": "In a quest to understand how video games themselves are implemented, you'll explore the design of such childhood games as: Super Mario Bros., Pong, Flappy Bird, Breakout, Match 3, Legend of Zelda, Angry Birds, Pokémon, 3D Helicopter Game, Dreadhalls, and Portal.\n\nVia lectures and hands-on projects, the course explores principles of 2D and 3D graphics, animation, sound, and collision detection using frameworks like Unity and LÖVE 2D, as well as languages like Lua and C#. By class’s end, you'll have programmed several of your own games and gained a thorough understanding of the basics of game design and development.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-23",
+      "ratingsSum": 0,
+      "imageUrl": "https://www.brsoftech.com/blog/wp-content/uploads/2020/04/1-11-1024x683.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 24,
       "title": "Mobile App Development with React Native",
       "description": "This course picks up where CS50 leaves off, transitioning from web development to mobile app development with React Native.\n\nThe course introduces you to modern JavaScript (including ES6 and ES7) as well as to JSX, a JavaScript extension. Through hands-on projects, you'll gain experience with React and its paradigms, app architecture, and user interfaces. The course culminates in a final project for which you'll implement an app entirely of your own design.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-24",
+      "ratingsSum": 0,
+      "imageUrl": "https://cdn-images-1.medium.com/max/640/1*8NjDXiICAKMgwEX3UEx85w.png",
+      "ratingsCount": 0
+    },
+    {
       "id": 25,
       "title": "Web Programming with Python and JavaScript",
       "description": "Topics include database design, scalability, security, and user experience. Through hands-on projects, you'll learn to write and use APIs, create interactive UIs, and leverage cloud services like GitHub and Heroku. By course's end, you'll emerge with knowledge and experience in principles, languages, and tools that empower you to design and deploy applications on the Internet.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-25",
+      "ratingsSum": 0,
+      "imageUrl": "https://www.valentinog.com/blog/static/2097816014cc407c923a4f7775d61bd1/c1b63/python-for-js-developers.png",
+      "ratingsCount": 0
+    },
+    {
       "id": 26,
       "title": "Pyramids of Giza: Ancient Egyptian Art and Archaeology",
       "description": "Where is Giza? How were the Pyramids built? How did the cemeteries and hundreds of decorated tombs around them develop? What was Giza’s contribution to this first great age of ancient Egyptian civilization, the Old Kingdom?\n\nThe Giza Plateau and its cemeteries — including the majestic Pyramids and the Great Sphinx — are stirring examples of ancient Egyptian architecture and culture. They provide windows into ancient Egyptian society, but also contain mysteries waiting to be solved. The Egyptian Pyramids at Giza provide an opportunity to explore the history of archaeology and to learn about some of the modern methods shaping the discipline today.\n\nThis introductory course will explore the art, archaeology, and history surrounding the Giza Pyramids. We will learn about Egyptian pharaohs and high officials of the Pyramid Age, follow in the footsteps of the great 20th-century expeditions, and discover how cutting-edge digital tools like 3D-modeling are reshaping the discipline of Egyptology.\n\nJoin us on this online journey to ancient Egypt’s most famous archaeological site as we uncover the history and significance of Giza, and use new digital techniques to unravel the mysteries of its ancient tombs and temples.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-26",
+      "ratingsSum": 0,
+      "imageUrl": "https://i.ytimg.com/vi/u1S9p3IfCV0/hqdefault.jpg",
+      "ratingsCount": 0
+    },
+    {
       "id": 27,
       "title": "Modern Masterpieces of World Literature",
       "description": "Based on the second half of the Masterpieces of World Literature edX MOOC, this short literature course examines how writers reach beyond national and linguistic boundaries as worldly readers and travelers, and how their modern fictions rise to the status of world literature.\n\nThese masterpieces of modern world literature take part in a tradition of weaving small stories into ambitious projects—one that reaches back to medieval tales and extends forward to contemporary novels. Throughout the course, you will learn how these writers use their fictions to engage directly with the political and social concerns of their present and of a globalized modernity, relating experiences of exploration, migration, international conflict, and cultural exchange.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-27",
+      "ratingsSum": 0,
+      "imageUrl": "https://artscimedia.case.edu/wp-content/uploads/sites/75/2014/03/14235938/header-e1396030818750.png",
+      "ratingsCount": 0
+    },
+    {
       "id": 28,
       "title": "Introduction to Artificial Intelligence with Python",
       "description": "AI is transforming how we live, work, and play. By enabling new technologies like self-driving cars and recommendation systems or improving old ones like medical diagnostics and search engines, the demand for expertise in AI and machine learning is growing rapidly. This course will enable you to take the first step toward solving important real-world problems and future-proofing your career.\n\nCS50’s Introduction to Artificial Intelligence with Python explores the concepts and algorithms at the foundation of modern artificial intelligence, diving into the ideas that give rise to technologies like game-playing engines, handwriting recognition, and machine translation. Through hands-on projects, students gain exposure to the theory behind graph search algorithms, classification, optimization, reinforcement learning, and other topics in artificial intelligence and machine learning as they incorporate them into their own Python programs. By course’s end, students emerge with experience in libraries for machine learning as well as knowledge of artificial intelligence principles that enable them to design intelligent systems of their own.\n\nEnroll now to gain expertise in one of the fastest-growing domains of computer science from the creators of one of the most popular computer science courses ever, CS50. You’ll learn the theoretical frameworks that enable these new technologies while gaining practical experience in how to apply these powerful techniques in your work.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
+      "datePublished": "2020-05-28",
+      "ratingsSum": 0,
+      "imageUrl": "https://www.suffixtree.com/wp-content/uploads/2019/04/AI_drives_python.png",
+      "ratingsCount": 0
+    },
+    {
       "id": 29,
-      "title": "Machine Learning",
-      "description": "Perhaps the most popular data science methodologies come from machine learning. What distinguishes machine learning from other computer guided decision processes is that it builds prediction algorithms using data. Some of the most popular products that use machine learning include the handwriting readers implemented by the postal service, speech recognition, movie recommendation systems, and spam detectors.\n\nIn this course, part of our Professional Certificate Program in Data Science, you will learn popular machine learning algorithms, principal component analysis, and regularization by building a movie recommendation system.\n\nYou will learn about training data, and how to use a set of data to discover potentially predictive relationships. As you build the movie recommendation system, you will learn how to train algorithms using training data so you can predict the outcome for future datasets. You will also learn about overtraining and techniques to avoid it such as cross-validation. All of these skills are fundamental to machine learning.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
-      "id": 30,
       "title": "Visualization",
       "description": "As part of our Professional Certificate Program in Data Science, this course covers the basics of data visualization and exploratory data analysis. We will use three motivating examples and ggplot2, a data visualization package for the statistical programming language R. We will start with simple datasets and then graduate to case studies about world health, economics, and infectious disease trends in the United States.\n\nWe’ll also be looking at how mistakes, biases, systematic errors, and other unexpected problems often lead to data that should be handled with care. The fact that it can be difficult or impossible to notice a mistake within a dataset makes data visualization particularly important.\n\nThe growing availability of informative datasets and software tools has led to increased reliance on data visualizations across many areas. Data visualization provides a powerful way to communicate data-driven findings, motivate analyses, and detect flaws. This course will give you the skills you need to leverage data to reveal valuable insights and advance your career.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
-      "id": 31,
+      "datePublished": "2020-05-30",
+      "ratingsSum": 0,
+      "imageUrl": "https://dzone.com/storage/temp/7808410-data-visualization.png",
+      "ratingsCount": 0
+    },
+    {
+      "id": 30,
       "title": "Linear Regression",
       "description": "Linear regression is commonly used to quantify the relationship between two or more variables. It is also used to adjust for confounding. This course, part of our Professional Certificate Program in Data Science, covers how to implement linear regression and adjust for confounding in practice using R.\n\nIn data science applications, it is very common to be interested in the relationship between two or more variables. The motivating case study we examine in this course relates to the data-driven approach used to construct baseball teams described in Moneyball. We will try to determine which measured outcomes best predict baseball runs by using linear regression.\n\nWe will also examine confounding, where extraneous variables affect the relationship between two or more other variables, leading to spurious associations. Linear regression is a powerful technique for removing confounders, but it is not a magical process. It is essential to understand when it is appropriate to use, and this course will teach you when to apply this technique.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
-    }, {
-      "id": 32,
+      "datePublished": "2020-05-31",
+      "ratingsSum": 0,
+      "imageUrl": "https://miro.medium.com/max/2760/1*0oCUTSRaNopLwjb94VOSyg.png",
+      "ratingsCount": 0
+    },
+    {
+      "id": 31,
       "title": "Capstone",
       "description": "To become an expert data scientist you need practice and experience. By completing this capstone project you will get an opportunity to apply the knowledge and skills in R data analysis that you have gained throughout the series. This final project will test your skills in data visualization, probability, inference and modeling, data wrangling, data organization, regression, and machine learning.\n\nUnlike the rest of our Professional Certificate Program in Data Science, in this course, you will receive much less guidance from the instructors. When you complete the project you will have a data product to show off to potential employers or educational programs, a strong indicator of your expertise in the field of data science.",
-      "datePublished": "",
-      "rating": 0,
-      "imageUrl":""
+      "datePublished": "2020-06-01",
+      "ratingsSum": 0,
+      "imageUrl": "https://mk0essayminq00n3f4xd.kinstacdn.com/wp-content/uploads/2018/05/importance-of-captone-project-1080x675.jpg",
+      "ratingsCount": 0
+    },
+    {
+      "id": 32,
+      "title": "Marketing Analytics",
+      "description": "Organizations large and small are inundated with data about consumer choices. But that wealth of information does not always translate into better decisions. Knowing how to interpret data is the challenge -- and marketers in particular are increasingly expected to use analytics to inform and justify their decisions.   Marketing analytics enables marketers to measure, manage and analyze marketing performance to maximize its effectiveness and optimize return on investment (ROI). Beyond the obvious sales and lead generation applications, marketing analytics can offer profound insights into customer preferences and trends, which can be further utilized for future marketing and business decisions.   This course gives you the tools to measure brand and customer assets, understand regression analysis, and design experiments as a way to evaluate and optimize marketing campaigns. You'll leave the course with a solid understanding of how to use marketing analytics to predict outcomes and systematically allocate resources.",
+      "datePublished": "2020-05-31",
+      "ratingsSum": 0,
+      "imageUrl": "https://www.digitalvidya.com/wp-content/uploads/2019/03/Marketing-Analytics.jpg",
+      "ratingsCount": 0
     }
   ],
-  "reviews": {
-    "id": 1,
-    "courseId": 1,
-    "userId": 1,
-    "score": 5
-  }
+  "ratings": [
+    {
+      "courseId": 1,
+      "rating": 6,
+      "userId": 1,
+      "id": 1
+    }
+  ],
+  "favouriteCourses": [
+    {
+      "id": 1,
+      "userId": 1,
+      "courseId": 1
+    },
+    {
+      "userId": 1,
+      "courseId": 4,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "courseId": 9,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "courseId": 19,
+      "id": 6
+    }
+  ]
 }

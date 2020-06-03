@@ -1,0 +1,20 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 1000vh;
+}
+
+.app-main {
+  //background-image: url("../assets/images/pm_course_woocommerce.jpg");
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  opacity: 0.8;
+}
+.navbar{
+  background: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,13 @@
+<button class="fav-btn" (click)="toggleSelected()">
+
+  <span class="fa fa-heart"
+    *ngIf="selected"
+    aria-label="Example icon-button with a heart icon">
+  </span>
+
+  <span class="fa fa-heart-o"
+    *ngIf="!selected"
+    aria-label="Example icon-button with a heart icon">
+  </span>
+
+</button>

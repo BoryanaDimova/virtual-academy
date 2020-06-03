@@ -1,0 +1,63 @@
+<div class="login-form justify-content-center">
+  <div class="row">
+    <div class="col-md-12">
+      <header class="head-form">
+        <h2>Log In</h2>
+      </header>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <!-- Start Form -->
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="col-md-12">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <span class="fa fa-envelope"></span>
+            </span>
+          </div>
+          <input type="email"
+                 class="form-control"
+                 id="email"
+                 placeholder="john.doe@gmail.com"
+                 formControlName="email">
+        </div>
+      </div>
+
+      <!--   Password -->
+      <div class="col-md-12">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+              <span class="input-group-text">
+                <span class="fa fa-key"></span>
+              </span>
+          </div>
+          <!--   Password Input-->
+          <input [type]="fieldTextType ? 'text' : 'password'"
+                 class="form-control"
+                 id="password"
+                 placeholder="Password"
+                 formControlName="password">
+
+          <!--      Show/hide password  -->
+          <div class="input-group-append">
+              <span class="input-group-text">
+                 <span aria-hidden="true" type="button" id="eye" class="fa"
+                       [ngClass]="{
+                          'fa-eye-slash': !fieldTextType,
+                          'fa-eye': fieldTextType
+                        }"
+                       (click)="togglePass()"></span>
+              </span>
+          </div>
+        </div>
+      </div>
+      <!--        buttons -->
+      <div class="row justify-content-center">
+        <button type="submit" class="btn log-in" (click)="onSubmit()"> Log In</button>
+      </div>
+    </form>
+    <!-- End Form -->
+  </div>
+</div>

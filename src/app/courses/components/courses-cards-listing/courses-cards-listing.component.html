@@ -1,0 +1,41 @@
+<div class="row mb-3">
+  <div class="col-md-12 d-flex justify-content-between">
+    <div class="col-md-10">
+      <form class="d-flex" [formGroup]="formGroup" (ngSubmit)="onSearch()">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+                 <span aria-hidden="true" type="button" id="search" class="fa fa-search"></span>
+              </span>
+          </div>
+          <input type="text"
+                 class="form-control"
+                 placeholder="Search..."
+                 formControlName="search"
+                 (keypress)="onSearch()">
+          <div class="input-group-append">
+            <span class="input-group-text">
+                 <span aria-hidden="true" type="button" id="clearSearch" class="fa fa-times-circle-o"
+                       (click)="onClearSearch()"></span>
+              </span>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-md-2">
+      <a class="btn btn-outline-info btn-block" (click)="openFormModal()">Add new</a>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-12 card-holder" *ngFor="let course of courses">
+    <app-course-card-item [course]="course" [favourite]="favouriteCourses.has(course.id)"
+                          (courseDeleted)="onDelete($event)"
+                          (addToFavourites)="onAddToFavourites($event)"
+                          (removeFromFavourites)="onRemoveFromFavourites($event)"
+                          (navigateToViewEvent)="navigateToView($event)">
+    </app-course-card-item>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-6">
+    <h5>{{course.title}}</h5>
+    <div>Date Published: {{course.datePublished | date}}</div>
+  </div>
+  <div class="col-md-6">
+    <div>Rating:
+      <ngb-rating class="rating-list" max="6" readonly="true"
+                  [rate]="(course.ratingsCount > 0 ? course.ratingsSum/course.ratingsCount : 0)"></ngb-rating>
+    </div>
+    <div><span class="fa fa-pencil" type="button" (click)="openFormModal()"></span></div>
+  </div>
+  <div class="col-md-12">
+    <img src="{{course.imageUrl}}">
+  </div>
+  <div class="col-md-12">
+    <div>{{course.description}}</div>
+  </div>
+  <div class="col-md-6">
+    Rate:
+    <ngb-rating class="rating-list" [formControl]="ctrl" max="6" (click)="onRateChanged()"></ngb-rating>
+    <div></div>
+  </div>
+</div>
