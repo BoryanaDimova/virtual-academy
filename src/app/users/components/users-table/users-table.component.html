@@ -1,28 +1,85 @@
-<table class="table">
+<table class="table table-striped">
   <thead>
   <tr>
     <th scope="col">#</th>
     <th scope="col">First Name</th>
     <th scope="col">Last Name</th>
     <th scope="col">Email</th>
+    <th scope="col">Blocked</th>
+    <th scope="col">Role</th>
     <th scope="col">Actions</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let user of users; let i = index">
+
     <th scope="row">{{i + 1}}</th>
-    <td>{{user.firstName}}</td>
-    <td>{{user.lastName}}</td>
-    <td >{{user.email}}</td>
-    <td *ngIf="!isEditable">
-      <i class="fa fa-pencil btn btn-outline-primary ml-2" type="button" aria-hidden="true" (click)="this.isEditable = true"></i>
-      <i class="fa fa-ban btn btn-outline-danger ml-2" type="button" aria-hidden="true" (click)="onBlockClick(user.id)" disabled="[user.isBlocked]"></i>
-      <i class="fa fa-trash btn btn-outline-dark ml-2" type="button" aria-hidden="true" (click)="onDeleteClick(user.id)"></i>
+    <td>
+      <input *ngIf="(user.id === formGroup.controls.id.value && !editDisabled); else fNameElse"
+             type="text"
+             class="form-control"
+             id="firstName"
+             (change)="formGroup.controls.firstName.setValue($event.target.value)"
+             [value]="formGroup.controls.firstName.value"/>
+      <ng-template #fNameElse><span>{{user.firstName}}</span></ng-template>
     </td>
-    <td *ngIf="isEditable">
-      <i class="fa fa-check-square-o btn btn-outline-primary ml-2" type="submit" aria-hidden="true" (click)="onDeleteClick(user.id)"></i>
-      <i class="fa fa-close btn btn-outline-dark ml-2" type="button" aria-hidden="true" (click)="this.isEditable = false"></i>
+    <td>
+      <input *ngIf="(user.id == formGroup.controls.id.value && !editDisabled); else lNameElse"
+             type="text"
+             class="form-control"
+             id="lastName"
+             (change)="formGroup.controls.lastName.setValue($event.target.value)"
+             [value]="formGroup.controls.lastName.value"/>
+      <ng-template #lNameElse><span>{{user.lastName}}</span></ng-template>
     </td>
+    <td>
+      <input *ngIf="(user.id === formGroup.controls.id.value && !editDisabled); else emailElse"
+             type="text"
+             class="form-control"
+             id="email"
+             (change)="formGroup.controls.email.setValue($event.target.value)"
+             [value]="formGroup.controls.email.value"/>
+      <ng-template #emailElse><span>{{user.email}}</span></ng-template>
+    </td>
+    <td>
+      <input *ngIf="(user.id == formGroup.controls.id.value && !editDisabled); else blockedElse"
+             type="checkbox"
+             class="form-control"
+             id="isBlocked"
+             [checked]="formGroup.controls.isBlocked.value"
+             (change)="formGroup.controls.isBlocked.setValue($event.target.checked)"/>
+      <ng-template #blockedElse><span type="checkbox">{{user.isBlocked}}</span></ng-template>
+    </td>
+    <td>
+      <select *ngIf="(user.id == formGroup.controls.id.value && !editDisabled); else roleElse"
+              class="form-control"
+              id="role"
+              (change)="formGroup.controls.isBlocked.setValue($event.target.value)"
+              [(ngModel)]="user.role"
+              [value]="formGroup.controls.role.value">
+        <option *ngFor="let key of rolesOptions" [ngValue]="key" [label]="roleTypes[key]"></option>
+      </select>
+      <ng-template #roleElse><span>{{user.role}}</span></ng-template>
+    </td>
+
+    <td *ngIf="user.id === formGroup.controls.id.value&& !editDisabled; else elseBlock">
+      <button class="fa fa-check-square-o btn btn-outline-primary ml-2" type="submit" aria-hidden="true"
+              (click)="updateEdit()"></button>
+      <button class="fa fa-close btn btn-outline-dark ml-2" type="button" aria-hidden="true"
+              (click)="cancelEdit()"></button>
+    </td>
+    <ng-template #elseBlock>
+      <td>
+        <button class="fa fa-pencil btn btn-outline-primary ml-2" type="button" aria-hidden="true"
+                (click)="editRow(user)"></button>
+        <button class="fa fa-ban btn btn-outline-danger ml-2" type="button" aria-hidden="true"
+                (click)="onBlockClick(user)"
+                [disabled]="user.isBlocked"></button>
+        <button class="fa fa-trash btn btn-outline-dark ml-2" type="button" aria-hidden="true"
+                (click)="onDeleteClick(user.id)"></button>
+      </td>
+    </ng-template>
   </tr>
   </tbody>
 </table>
+

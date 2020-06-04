@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {UserReactiveFormComponent} from './components/user-reactive-form/user-reactive-form.component';
 import {UsersTableComponent} from './components/users-table/users-table.component';
@@ -17,7 +17,8 @@ import {CoursesModule} from '../courses/courses.module';
     ReactiveFormsModule,
     HttpClientModule,
     UsersRoutingModule,
-    CoursesModule
+    CoursesModule,
+    FormsModule
   ],
   declarations: [
     UsersComponent,

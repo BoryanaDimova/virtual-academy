@@ -3,6 +3,8 @@ import {User} from '../../../core/models/user.interface';
 import {UserService} from '../../services/user.service';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {Role} from '../../../core/models/role';
 
 @Component({
   selector: 'app-users-table',
@@ -11,14 +13,21 @@ import {Subject} from 'rxjs';
 })
 export class UsersTableComponent implements OnInit, OnDestroy {
 
+  formGroup: FormGroup;
+  editDisabled = true;
   users: User[];
-  isEditable: boolean;
   destroy$ = new Subject<boolean>();
+  rolesOptions = [];
+  roleTypes = Role;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,
+              private fb: FormBuilder) {
+  }
 
   ngOnInit(): void {
+    this.rolesOptions = Object.keys(this.roleTypes);
     this.getUsers();
+    this.buildForm();
   }
 
   ngOnDestroy(): void {
@@ -26,7 +35,7 @@ export class UsersTableComponent implements OnInit, OnDestroy {
     this.destroy$.unsubscribe();
   }
 
-  private getUsers(){
+  private getUsers() {
     this.userService.getUsers().pipe(
       takeUntil(this.destroy$)
     ).subscribe(response => {
@@ -36,17 +45,53 @@ export class UsersTableComponent implements OnInit, OnDestroy {
     });
   }
 
-  onBlockClick(id: number){
-    const bannedUser: User = this.users.find((u: User) => u.id = id);
+  onBlockClick(bannedUser: User) {
     bannedUser.isBlocked = true;
     this.userService.saveUser(bannedUser).pipe(
       takeUntil(this.destroy$)
     ).subscribe();
   }
 
-  onDeleteClick(id: number){
+  onDeleteClick(id: number) {
     this.userService.deleteUser(id).pipe(
       takeUntil(this.destroy$)
-    ).subscribe();
+    ).subscribe(() =>
+      this.getUsers()
+    );
+  }
+
+  editRow(user: User) {
+    this.buildForm(user);
+    this.editDisabled = false;
+  }
+
+  updateEdit() {
+    const userData = this.formGroup.value;
+    this.userService.saveUser(userData)
+      .subscribe((response) => {
+        this.getUsers();
+        this.cancelEdit();
+      }, err => {
+        this.cancelEdit();
+      });
+  }
+
+  cancelEdit() {
+    // cancel
+    this.buildForm();
+    this.editDisabled = true;
+  }
+
+  private buildForm(user?: User): void {
+
+    this.formGroup = this.fb.group({
+      id: user ? user.id : 0,
+      firstName: user ? user.firstName : '',
+      lastName: user ? user.lastName : '',
+      email: user ? user.email : '',
+      password: user ? user.password : '',
+      isBlocked: user ? user.isBlocked : false,
+      role: user ? user.role : ''
+    });
   }
 }

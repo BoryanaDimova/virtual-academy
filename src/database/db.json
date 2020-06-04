@@ -6,7 +6,26 @@
       "lastName": "Admin",
       "email": "admin@admin.com",
       "password": "admin@Pass1",
-      "isBlocked": false
+      "isBlocked": false,
+      "role": "Admin"
+    },
+    {
+      "id": 2,
+      "firstName": "Test",
+      "lastName": "Test123",
+      "email": "test@gmail.com",
+      "password": "test@myPass123",
+      "isBlocked": false,
+      "role": "User"
+    },
+    {
+      "id": 3,
+      "firstName": "Anika",
+      "lastName": "Antonova",
+      "email": "ani.antonova@gmail.com",
+      "password": "aniPass123!",
+      "isBlocked": false,
+      "role": "User"
     }
   ],
   "courses": [

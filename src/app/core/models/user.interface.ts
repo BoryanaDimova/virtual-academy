@@ -1,3 +1,5 @@
+import {Role} from './role';
+
 export interface User {
   id?: number;
   firstName: string;
@@ -5,5 +7,5 @@ export interface User {
   email: string;
   password: string;
   isBlocked: boolean;
-  image?: File;
+  role: Role;
 }
