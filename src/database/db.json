@@ -7,7 +7,7 @@
       "email": "admin@admin.com",
       "password": "admin@Pass1",
       "isBlocked": false,
-      "role": "Admin"
+      "isAdmin": true
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "email": "test@gmail.com",
       "password": "test@myPass123",
       "isBlocked": false,
-      "role": "User"
+      "isAdmin": false
     },
     {
       "id": 3,
@@ -25,7 +25,16 @@
       "email": "ani.antonova@gmail.com",
       "password": "aniPass123!",
       "isBlocked": false,
-      "role": "User"
+      "isAdmin": false
+    },
+    {
+      "id": 4,
+      "firstName": "Test",
+      "lastName": "test",
+      "email": "test@te.com",
+      "password": "1234werftgdg#",
+      "isBlocked": false,
+      "isAdmin": false
     }
   ],
   "courses": [

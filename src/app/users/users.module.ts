@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
+import {PasswordFormatPipe} from './pipes/passwordFormat.pipe';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {UserReactiveFormComponent} from './components/user-reactive-form/user-reactive-form.component';
@@ -7,6 +8,7 @@ import {UsersTableComponent} from './components/users-table/users-table.componen
 import {UsersRoutingModule} from './users-routing.module';
 import {UsersComponent} from './users.component';
 import {CoursesModule} from '../courses/courses.module';
+
 
 @NgModule({
   entryComponents: [
@@ -21,9 +23,13 @@ import {CoursesModule} from '../courses/courses.module';
     FormsModule
   ],
   declarations: [
+    PasswordFormatPipe,
     UsersComponent,
     UserReactiveFormComponent,
     UsersTableComponent
+  ],
+  exports: [
+    PasswordFormatPipe
   ]
 })
 

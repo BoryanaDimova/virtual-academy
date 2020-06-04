@@ -1,12 +1,11 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {AuthenticationService} from '../../services/authentication.service';
-import {FormValidators} from '../../validators/form.validators';
+import {FormValidators} from '../../../core/validators/form.validators';
 import {Subject} from 'rxjs';
 import {map, takeUntil} from 'rxjs/operators';
 import {Router} from '@angular/router';
 import {User} from '../../../core/models/user.interface';
-import {Role} from '../../../core/models/role';
 
 @Component({
   selector: 'app-registration',
@@ -63,7 +62,7 @@ export class RegistrationComponent implements OnInit {
       password: ['', Validators.compose([Validators.required, FormValidators.patternValidator()])],
       confirmPassword: ['', [Validators.required, FormValidators.MatchPassword(this.form?.controls?.password.value)]],
       isBlocked: false,
-      role: Role.User
+      isAdmin: false
     });
   }
 

@@ -62,7 +62,7 @@ export class UserReactiveFormComponent implements OnInit, OnDestroy {
       email: [this.user.email],
       password: [this.user.password],
       isBlocked: [this.user.isBlocked],
-      role: [this.user.role]
+      isAdmin: [this.user.isAdmin]
     });
   }
 }

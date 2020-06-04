@@ -1,5 +1,3 @@
-import {Role} from './role';
-
 export interface User {
   id?: number;
   firstName: string;
@@ -7,5 +5,5 @@ export interface User {
   email: string;
   password: string;
   isBlocked: boolean;
-  role: Role;
+  isAdmin: boolean;
 }

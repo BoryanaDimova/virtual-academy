@@ -4,7 +4,6 @@ import {UserService} from '../../services/user.service';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import {Role} from '../../../core/models/role';
 
 @Component({
   selector: 'app-users-table',
@@ -17,15 +16,12 @@ export class UsersTableComponent implements OnInit, OnDestroy {
   editDisabled = true;
   users: User[];
   destroy$ = new Subject<boolean>();
-  rolesOptions = [];
-  roleTypes = Role;
 
   constructor(private userService: UserService,
               private fb: FormBuilder) {
   }
 
   ngOnInit(): void {
-    this.rolesOptions = Object.keys(this.roleTypes);
     this.getUsers();
     this.buildForm();
   }
@@ -77,6 +73,10 @@ export class UsersTableComponent implements OnInit, OnDestroy {
   }
 
   cancelEdit() {
+    // @ts-ignore
+    if (this.users.filter(u => u.id === 0).length > 0) {
+      this.users.pop();
+    }
     // cancel
     this.buildForm();
     this.editDisabled = true;
@@ -91,7 +91,25 @@ export class UsersTableComponent implements OnInit, OnDestroy {
       email: user ? user.email : '',
       password: user ? user.password : '',
       isBlocked: user ? user.isBlocked : false,
-      role: user ? user.role : ''
+      isAdmin: user ? user.isAdmin : false
     });
+  }
+
+  addNewUser(){
+    if (this.users.filter(u => u.id === 0).length > 0){
+      return;
+    }
+    const newUser = {
+      id: 0,
+      email: '',
+      firstName: '',
+      isAdmin: false,
+      isBlocked: false,
+      lastName: '',
+      password: ''
+    };
+    this.users.push(newUser);
+    this.buildForm(newUser);
+    this.editDisabled = false;
   }
 }
