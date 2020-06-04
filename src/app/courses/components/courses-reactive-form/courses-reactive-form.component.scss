@@ -1,8 +1,10 @@
 .close{
   border: 1px solid #f1f1f1;
 }
-.my-modal{
+
+.modal{
   width: 100%;
+  display: initial !important;
 }
 
 #modal-content-wrapper {
@@ -13,6 +15,17 @@
 }
 
 .modal-title {
-  font-size: 22px;
+  font-size: 30px;
   color: black;
+}
+
+.modal-footer .btn-group button {
+  border-top-left-radius : 0;
+  border-top-right-radius : 0;
+  border: none;
+  border-right: 1px solid #ddd;
+}
+
+.modal-footer .btn-group:last-child > button {
+  border-right: 0;
 }

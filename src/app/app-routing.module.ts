@@ -2,7 +2,6 @@ import {NgModule} from '@angular/core';
 import {Route, RouterModule} from '@angular/router';
 import {NonAuthenticatedGuard} from './core/guards/non-authenticated.guard';
 import {AuthGuard} from './core/guards/auth.guard';
-import {HomeComponent} from './core/components/home/home.component';
 
 const routes: Route[] = [
   {
@@ -21,13 +20,9 @@ const routes: Route[] = [
     canLoad: [AuthGuard]
   },
   {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home'
+    redirectTo: 'courses'
   }
 ];
 
