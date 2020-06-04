@@ -1,6 +1,6 @@
 <div class="row mb-3">
   <div class="col-md-12 d-flex justify-content-between">
-    <div class="col-md-10">
+    <div class="col-md-10" [class] = "isCurrentUserAdmin ? 'col-md-10' : 'col-md-12'">
       <form class="d-flex" [formGroup]="formGroup" (ngSubmit)="onSearch()">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
@@ -23,8 +23,8 @@
       </form>
     </div>
 
-    <div class="col-md-2">
-      <a class="btn btn-outline-info btn-block" (click)="openFormModal()">Add new</a>
+    <div class="col-md-2" *ngIf="isCurrentUserAdmin">
+      <a class="btn btn-outline-info btn-block" (click)="openFormModal()">New Course</a>
     </div>
   </div>
 </div>
@@ -32,10 +32,11 @@
 <div class="row">
   <div class="col-lg-4 col-md-6 col-sm-12 card-holder" *ngFor="let course of courses">
     <app-course-card-item [course]="course" [favourite]="favouriteCourses.has(course.id)"
-                          (courseDeleted)="onDelete($event)"
+                          (courseRemoved)="onDelete($event)"
                           (addToFavourites)="onAddToFavourites($event)"
                           (removeFromFavourites)="onRemoveFromFavourites($event)"
-                          (navigateToViewEvent)="navigateToView($event)">
+                          (navigateToViewEvent)="navigateToView($event)"
+                          [isCurrentUserAdmin]="isCurrentUserAdmin">
     </app-course-card-item>
   </div>
 </div>

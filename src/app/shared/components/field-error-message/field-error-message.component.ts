@@ -22,7 +22,7 @@ export class FieldErrorMessageComponent {
         const errors = this.control.errors;
 
         if (errors.required) {
-          return 'This field is required. Please add a value.';
+          return 'This field is required.';
         }
 
         if (errors.minlength) {
@@ -32,9 +32,24 @@ export class FieldErrorMessageComponent {
           `;
         }
 
+        if (errors.invalidPassword) {
+          return ` The password should contain minimum 8 characters, at least 1 uppercase letter,
+          1 lowercase letter, 1 number and 1 special character.
+          `;
+        }
+
         if (errors.passwordMismatch) {
           return 'Passwords are different';
         }
+
+        if (errors.invalidName) {
+          return `This field should only contain letters.`;
+        }
+
+        if (errors.email) {
+          return `This is not a valid email.`;
+        }
+
       }
     }
   }

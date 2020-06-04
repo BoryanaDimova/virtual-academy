@@ -12,7 +12,8 @@ export class CourseCardItemComponent implements OnInit {
 
   @Input() course: Course;
   @Input() favourite: boolean;
-  @Output() courseDeleted = new EventEmitter<number>();
+  @Input() isCurrentUserAdmin: boolean;
+  @Output() courseRemoved = new EventEmitter<number>();
   @Output() addToFavourites = new EventEmitter<number>();
   @Output() removeFromFavourites = new EventEmitter<number>();
   @Output() navigateToViewEvent = new EventEmitter<number>();
@@ -31,8 +32,8 @@ export class CourseCardItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onDeleteClick(): void {
-    this.courseDeleted.emit(this.course.id);
+  onRemoveClick(): void {
+    this.courseRemoved.emit(this.course.id);
   }
 
   navigateToView(){

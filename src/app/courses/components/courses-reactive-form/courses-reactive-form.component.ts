@@ -43,12 +43,13 @@ export class CoursesReactiveFormComponent implements OnInit, OnDestroy {
 
   private buildForm(): void {
     if (!this.course) {
+      const date = new Date();
       this.course = {
         ratingsCount: 0,
         ratingsSum: 0,
         title: '',
         description: '',
-        datePublished: new Date()
+        datePublished: new Date(date.getFullYear(), date.getMonth(), date.getDate())
       };
     }
 

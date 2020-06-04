@@ -8,6 +8,7 @@ import {filter, map, takeUntil} from 'rxjs/operators';
 import {FavouriteCourse} from '../../models/favouriteCourse.interface';
 import {User} from '../../../core/models/user.interface';
 import {Router} from '@angular/router';
+import {AuthenticationService} from '../../../auth/services/authentication.service';
 
 @Component({
   selector: 'app-favourite-courses-list',
@@ -17,6 +18,7 @@ import {Router} from '@angular/router';
 export class FavouriteCoursesListComponent implements OnInit, OnDestroy {
 
   courses: Course[];
+  isCurrentUserAdmin: boolean;
   destroy$ = new Subject<boolean>();
   favourites: FavouriteCourse[];
   favouriteCourses: Set<number> = new Set<number>();
@@ -24,10 +26,12 @@ export class FavouriteCoursesListComponent implements OnInit, OnDestroy {
   constructor(private courseService: CourseService,
               private fb: FormBuilder,
               private favouritesCoursesService: FavouritesCoursesService,
-              private router: Router) {
+              private router: Router,
+              private authService: AuthenticationService) {
   }
 
   ngOnInit(): void {
+    this.checkIfLoggedUserIsAdmin();
     this.getFavourites();
   }
 
@@ -36,7 +40,7 @@ export class FavouriteCoursesListComponent implements OnInit, OnDestroy {
     this.destroy$.unsubscribe();
   }
 
-  onRemoveFromFavourites(courseId: number): void{
+  onRemoveFromFavourites(courseId: number): void {
     this.favouritesCoursesService.getSelectedFavourite(courseId).pipe(
       takeUntil(this.destroy$)
     ).subscribe(response => {
@@ -44,7 +48,7 @@ export class FavouriteCoursesListComponent implements OnInit, OnDestroy {
     });
   }
 
-  private removeFromFavourites(favCourseId: number){
+  private removeFromFavourites(favCourseId: number) {
     this.favouritesCoursesService.removeFromFavourites(favCourseId).pipe(
       takeUntil(this.destroy$)
     ).subscribe(response => {
@@ -58,7 +62,7 @@ export class FavouriteCoursesListComponent implements OnInit, OnDestroy {
     this.courseService.getCourses(searchValue).pipe(
       map((response: Course[]) => response.filter(course => this.favouriteCourses.has(course.id)))
     ).subscribe(response => {
-     this.courses = response;
+      this.courses = response;
     }, error => {
       console.log(error);
     });
@@ -68,14 +72,14 @@ export class FavouriteCoursesListComponent implements OnInit, OnDestroy {
     this.favouritesCoursesService.getFavourites().pipe(
       takeUntil(this.destroy$)
     ).subscribe(response => {
-       this.favourites = response;
-       this.populateSet();
+      this.favourites = response;
+      this.populateSet();
     }, error => {
       console.log(error);
     });
   }
 
-  populateSet(): void{
+  populateSet(): void {
     this.favourites.forEach(fav => {
       this.favouriteCourses.add(fav.courseId);
     });
@@ -83,8 +87,14 @@ export class FavouriteCoursesListComponent implements OnInit, OnDestroy {
     this.getCourses();
   }
 
-  navigateToView(id: number){
+  navigateToView(id: number) {
     this.router.navigate([`/courses/view/${id}`]);
+  }
+
+  checkIfLoggedUserIsAdmin() {
+    this.authService.isLoggedUserAdmin().pipe(
+      takeUntil(this.destroy$)
+    ).subscribe(response => this.isCurrentUserAdmin = response);
   }
 }
 

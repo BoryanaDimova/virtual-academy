@@ -18,7 +18,6 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     FontAwesomeModule,
     AppRoutingModule,
-    SharedModule,
     NgbModule
   ],
   bootstrap: [AppComponent]

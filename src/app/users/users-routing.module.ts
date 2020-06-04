@@ -3,6 +3,7 @@ import {Route, RouterModule} from '@angular/router';
 import {UsersComponent} from './users.component';
 import {UsersTableComponent} from './components/users-table/users-table.component';
 import {UserReactiveFormComponent} from './components/user-reactive-form/user-reactive-form.component';
+import {AuthGuard} from '../core/guards/auth.guard';
 
 const routes: Route[] = [
   {
@@ -12,11 +13,8 @@ const routes: Route[] = [
     children: [
       {
         path: 'users-table',
-        component: UsersTableComponent
-      },
-      {
-        path: 'my-profile',
-        component: UserReactiveFormComponent
+        component: UsersTableComponent,
+        canActivate: [AuthGuard]
       },
       {
         path: 'my-profile',

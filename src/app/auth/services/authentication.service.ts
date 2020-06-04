@@ -16,7 +16,7 @@ export class AuthenticationService {
   constructor(private http: HttpClient) {
   }
 
-  getUsers(): Observable<User[]>{
+  getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.url);
   }
 
@@ -57,6 +57,14 @@ export class AuthenticationService {
     }
 
     return this.hasLoggedIn$.asObservable();
+  }
+
+  isLoggedUserAdmin(): Observable<boolean> {
+    if (this.getLoggedUser() && this.getLoggedUser().isAdmin) {
+      return of(true);
+    }
+
+    return of(false);
   }
 
 }

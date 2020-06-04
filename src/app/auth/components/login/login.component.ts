@@ -4,6 +4,7 @@ import {AuthenticationService} from '../../services/authentication.service';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 import {Router} from '@angular/router';
+import {FormValidators} from '../../../core/validators/form.validators';
 
 @Component({
   selector: 'app-login',
@@ -51,7 +52,7 @@ export class LoginComponent implements OnInit, OnDestroy{
   private buildForm(): void {
     this.form = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      password: ['', Validators.compose([Validators.required, FormValidators.passwordPatternValidator()])]
     });
   }
 

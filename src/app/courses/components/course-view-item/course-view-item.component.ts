@@ -9,6 +9,7 @@ import {CourseRatingsService} from '../../services/courseRatings.service';
 import {CourseRates} from '../../models/courseRates.interface';
 import {CoursesReactiveFormComponent} from '../courses-reactive-form/courses-reactive-form.component';
 import {NgbModal, NgbModalConfig} from '@ng-bootstrap/ng-bootstrap';
+import {AuthenticationService} from '../../../auth/services/authentication.service';
 
 @Component({
   selector: 'app-course-view-item',
@@ -17,6 +18,7 @@ import {NgbModal, NgbModalConfig} from '@ng-bootstrap/ng-bootstrap';
 })
 export class CourseViewItemComponent implements OnInit, OnDestroy {
 
+  isCurrentUserAdmin: boolean;
   @Input() course: Course;
   rateRecord: CourseRates;
   destroy$ = new Subject<boolean>();
@@ -26,7 +28,8 @@ export class CourseViewItemComponent implements OnInit, OnDestroy {
               private route: ActivatedRoute,
               private courseService: CourseService,
               private ratingService: CourseRatingsService,
-              private modalService: NgbModal) {
+              private modalService: NgbModal,
+              private authService: AuthenticationService) {
     this.course = {
       ratingsCount: 0,
       ratingsSum: 0,
@@ -42,12 +45,13 @@ export class CourseViewItemComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.checkIfLoggedUserIsAdmin();
     this.route.params.pipe(
       takeUntil(this.destroy$)
     ).subscribe(params => {
       if (params.id) {
         this.course.id = params.id;
-        this.rateRecord.courseId = params.id;
+        this.rateRecord.courseId = parseInt(params.id);
         this.getCourse();
       }
     });
@@ -62,7 +66,7 @@ export class CourseViewItemComponent implements OnInit, OnDestroy {
     this.ratingService.getSelectedUserRatingByCourseId(this.course.id).pipe(
       takeUntil(this.destroy$)
     ).subscribe(response => {
-      if (!response){
+      if (!response) {
         return;
       }
       this.rateRecord = response;
@@ -86,7 +90,7 @@ export class CourseViewItemComponent implements OnInit, OnDestroy {
     });
   }
 
-  updateCourse(){
+  updateCourse() {
     this.courseService.saveCourse(this.course).pipe(
       takeUntil(this.destroy$)
     ).subscribe(response => {
@@ -94,7 +98,7 @@ export class CourseViewItemComponent implements OnInit, OnDestroy {
     });
   }
 
-  getCourse(){
+  getCourse() {
     this.courseService.getCourseById(this.course.id).pipe(
       takeUntil(this.destroy$)
     ).subscribe(response => {
@@ -104,6 +108,10 @@ export class CourseViewItemComponent implements OnInit, OnDestroy {
   }
 
   openFormModal() {
+    if (!this.isCurrentUserAdmin) {
+      return;
+    }
+
     const modalRef = this.modalService.open(CoursesReactiveFormComponent, {
       size: 'lg',
       centered: true,
@@ -117,5 +125,11 @@ export class CourseViewItemComponent implements OnInit, OnDestroy {
     }).catch((error) => {
       console.log(error);
     });
+  }
+
+  checkIfLoggedUserIsAdmin() {
+    this.authService.isLoggedUserAdmin().pipe(
+      takeUntil(this.destroy$)
+    ).subscribe(response => this.isCurrentUserAdmin = response);
   }
 }

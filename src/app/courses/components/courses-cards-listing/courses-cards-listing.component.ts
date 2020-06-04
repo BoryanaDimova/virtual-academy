@@ -9,6 +9,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {CoursesReactiveFormComponent} from '../courses-reactive-form/courses-reactive-form.component';
 import {FavouriteCourse} from '../../models/favouriteCourse.interface';
 import {Router} from '@angular/router';
+import {AuthenticationService} from '../../../auth/services/authentication.service';
 
 @Component({
   selector: 'app-courses',
@@ -17,6 +18,7 @@ import {Router} from '@angular/router';
 })
 export class CoursesCardsListingComponent implements OnInit, OnDestroy{
 
+  isCurrentUserAdmin: boolean;
   courses: Course[];
   favourites: FavouriteCourse[];
   destroy$ = new Subject<boolean>();
@@ -27,10 +29,12 @@ export class CoursesCardsListingComponent implements OnInit, OnDestroy{
               private fb: FormBuilder,
               private favouritesCoursesService: FavouritesCoursesService,
               private modalService: NgbModal,
-              private router: Router) {
+              private router: Router,
+              private authService: AuthenticationService) {
   }
 
   ngOnInit(): void {
+    this.checkIfLoggedUserIsAdmin();
     this.getCourses();
     this.formGroup = this.fb.group({
       search: ['']
@@ -132,6 +136,10 @@ export class CoursesCardsListingComponent implements OnInit, OnDestroy{
   }
 
   openFormModal() {
+    if (!this.isCurrentUserAdmin) {
+      return;
+    }
+
     const modalRef = this.modalService.open(CoursesReactiveFormComponent);
 
     modalRef.result.then(() => {
@@ -139,5 +147,11 @@ export class CoursesCardsListingComponent implements OnInit, OnDestroy{
     }).catch((error) => {
       console.log(error);
     });
+  }
+
+  checkIfLoggedUserIsAdmin() {
+    this.authService.isLoggedUserAdmin().pipe(
+      takeUntil(this.destroy$)
+    ).subscribe(response => this.isCurrentUserAdmin = response);
   }
 }

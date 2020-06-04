@@ -23,6 +23,7 @@
                  placeholder="john.doe@gmail.com"
                  formControlName="email">
         </div>
+        <app-field-error-message [control]="form.get('email')"></app-field-error-message>
       </div>
 
       <!--   Password -->
@@ -39,7 +40,6 @@
                  id="password"
                  placeholder="Password"
                  formControlName="password">
-
           <!--      Show/hide password  -->
           <div class="input-group-append">
               <span class="input-group-text">
@@ -52,6 +52,7 @@
               </span>
           </div>
         </div>
+        <app-field-error-message [control]="form.get('password')"></app-field-error-message>
       </div>
       <!--        buttons -->
       <div class="row justify-content-center">

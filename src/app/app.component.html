@@ -1,23 +1,25 @@
 <div class="app-main">
   <!--Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar">
-
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <!-- Brand -->
     <a class="navbar-brand" routerLink="/">{{ title }}</a>
     <!--/.Brand -->
 
     <!-- Collapse -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
-            aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" (click)="isMenuCollapsed = !isMenuCollapsed">
       <span class="navbar-toggler-icon"></span>
     </button>
     <!--/.Collapse -->
 
     <!-- Links -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent-3">
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse" id="navbarContent">
 
       <!-- Left -->
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav mr-auto" *ngIf="hasLoggedUser">
+        <li class="nav-item" *ngIf="isAdmin">
+          <a class="nav-link waves-effect waves-light" routerLink="users/users-table">Admin Panel</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link waves-effect waves-light" routerLink="courses/courses-cards-list">All Courses
             <span class="sr-only">(current)</span>
@@ -26,9 +28,7 @@
         <li class="nav-item">
           <a class="nav-link waves-effect waves-light" routerLink="courses/favourite-courses">Favourite Courses</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link waves-effect waves-light" routerLink="users/users-table">Users List</a>
-        </li>
+
       </ul>
       <!--/.Left -->
 
@@ -41,21 +41,21 @@
           <a class="nav-link waves-effect waves-light" role="button" (click)="onLogout()">Logout</a>
         </li>
       </ul>
-        <ul class="navbar-nav ml-auto nav-flex-icons" *ngIf="!hasLoggedUser">
-          <li class="nav-item">
-            <a class="nav-link waves-effect waves-light" routerLink="auth/register" role="button">Sign up</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link waves-effect waves-light" routerLink="auth/login" role="button">Login</a>
-          </li>
-        </ul>
+      <ul class="navbar-nav ml-auto nav-flex-icons" *ngIf="!hasLoggedUser">
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" routerLink="auth/register" role="button">Sign up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link waves-effect waves-light" routerLink="auth/login" role="button">Login</a>
+        </li>
+      </ul>
       <!--/.Right -->
 
     </div>
     <!--/.Links -->
   </nav>
   <!--/.Navbar -->
-  <div  class="container justify-content-center mt-4">
+  <div class="container justify-content-center mt-4">
     <router-outlet></router-outlet>
   </div>
 </div>

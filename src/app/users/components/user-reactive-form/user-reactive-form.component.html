@@ -8,7 +8,7 @@
             alt="Profile Image"/>
           <div class="file btn btn-lg btn-primary">
             Change Photo
-            <input #imageInput type="file" name="file" accept="image/*" disabled="true" readonly=""true/>
+            <input #imageInput type="file" name="file" accept="image/*" disabled="true" readonly="" true/>
           </div>
         </div>
       </div>
@@ -27,7 +27,8 @@
         </div>
       </div>
       <div class="col-md-2">
-        <input *ngIf="editable" type="submit" class="profile-edit-btn" name="saveChanges" value="Save Changes" (click)="onSubmit()"/>
+        <input *ngIf="editable" type="submit" class="profile-edit-btn" name="saveChanges" value="Save Changes"
+               (click)="onSubmit()"/>
         <input *ngIf="!editable" type="button" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"
                (click)="this.editable = true"/>
       </div>
@@ -48,7 +49,7 @@
                        id="firstName"
                        formControlName="firstName">
 
-                <!--        <app-field-error-message [control]="formGroup.get('firstName')"></app-field-error-message>-->
+                <app-field-error-message [control]="formGroup.get('firstName')"></app-field-error-message>
               </div>
               <div *ngIf="!editable" class="col-md-6">
                 <p> {{user.firstName}}</p>
@@ -58,13 +59,13 @@
               <div class="col-md-6">
                 <label>Last Name</label>
               </div>
-              <div class="col-md-6" *ngIf="editable" >
+              <div class="col-md-6" *ngIf="editable">
                 <input type="text"
                        class="form-control"
                        id="lastName"
                        formControlName="lastName">
 
-                <!--        <app-field-error-message [control]="formGroup.get('firstName')"></app-field-error-message>-->
+                <app-field-error-message [control]="formGroup.get('lastName')"></app-field-error-message>
               </div>
               <div *ngIf="!editable" class="col-md-6">
                 <p> {{user.lastName}}</p>
@@ -76,6 +77,33 @@
               </div>
               <div class="col-md-6">
                 <p>{{user.email}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>Password</label>
+              </div>
+              <div class="col-md-6 input-group" *ngIf="editable">
+                <input [type]="fieldTextType ? 'text' : 'password'"
+                       class="form-control"
+                       id="password"
+                       formControlName="password">
+                <div class="input-group-append">
+                  <span class="input-group-text">
+                     <span aria-hidden="true" type="button" id="eye" class="fa"
+                           [ngClass]="{
+                              'fa-eye-slash': !fieldTextType,
+                              'fa-eye': fieldTextType
+                            }"
+                           (click)="togglePass()">
+
+                     </span>
+                  </span>
+                </div>
+                <app-field-error-message [control]="formGroup.get('password')"></app-field-error-message>
+              </div>
+              <div *ngIf="!editable" class="col-md-6">
+                <p> {{user.password | passwordFormat}}</p>
               </div>
             </div>
           </div>

@@ -3,7 +3,8 @@ import {User} from '../../../core/models/user.interface';
 import {UserService} from '../../services/user.service';
 import {takeUntil} from 'rxjs/operators';
 import {Subject} from 'rxjs';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormValidators} from '../../../core/validators/form.validators';
 
 @Component({
   selector: 'app-users-table',
@@ -83,15 +84,14 @@ export class UsersTableComponent implements OnInit, OnDestroy {
   }
 
   private buildForm(user?: User): void {
-
     this.formGroup = this.fb.group({
-      id: user ? user.id : 0,
-      firstName: user ? user.firstName : '',
-      lastName: user ? user.lastName : '',
-      email: user ? user.email : '',
-      password: user ? user.password : '',
-      isBlocked: user ? user.isBlocked : false,
-      isAdmin: user ? user.isAdmin : false
+      id: [user ? user.id : 0],
+      firstName: [user ? user.firstName : '', Validators.compose([Validators.required, FormValidators.namePatternValidator()])],
+      lastName: [user ? user.lastName : '', Validators.compose([Validators.required, FormValidators.namePatternValidator()])],
+      email: [user ? user.email : '', [Validators.required, Validators.email]],
+      password: [user ? user.password : '', Validators.compose([Validators.required, FormValidators.passwordPatternValidator()])],
+      isBlocked: [user ? user.isBlocked : false, Validators.required],
+      isAdmin: [user ? user.isAdmin : false, Validators.required]
     });
   }
 

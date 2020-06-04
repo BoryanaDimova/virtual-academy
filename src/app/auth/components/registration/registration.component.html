@@ -30,6 +30,7 @@
                  placeholder="John"
                  formControlName="fName">
         </div>
+        <app-field-error-message [control]="form.get('firstName')"></app-field-error-message>
       </div>
 
       <!--Last Name-->
@@ -46,6 +47,7 @@
                  placeholder="Doe"
                  formControlName="lName">
         </div>
+        <app-field-error-message [control]="form.get('lastName')"></app-field-error-message>
       </div>
 
       <!--Email-->
@@ -62,6 +64,7 @@
                  placeholder="john.doe@gmail.com"
                  formControlName="email">
         </div>
+        <app-field-error-message [control]="form.get('email')"></app-field-error-message>
       </div>
 
       <!--   Password -->
@@ -92,6 +95,7 @@
               </span>
           </div>
         </div>
+        <app-field-error-message [control]="form.get('password')"></app-field-error-message>
       </div>
 
       <!--  Confirm Password -->
@@ -122,13 +126,8 @@
               </span>
           </div>
         </div>
+        <app-field-error-message [control]="form.get('confirmPassword')"></app-field-error-message>
       </div>
-      <label
-        class="text-danger"
-        *ngIf="form.controls['confirmPassword'].hasError('NoPassswordMatch')"
-      >
-        Password do not match
-      </label>
 
       <!--        buttons -->
       <div class="row">

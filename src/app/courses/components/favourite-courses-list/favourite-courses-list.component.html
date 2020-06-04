@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-lg-4 col-md-6 col-sm-12 card-holder" *ngFor="let course of courses">
-    <app-course-card-item [course]="course"
-                          (courseDeleted)="onRemoveFromFavourites($event)"
+    <app-course-card-item [course]="course" [isCurrentUserAdmin]="isCurrentUserAdmin"
+                          (courseRemoved)="onRemoveFromFavourites($event)"
                           (navigateToViewEvent)="navigateToView($event)">
     </app-course-card-item>
   </div>

@@ -23,8 +23,8 @@ $lines-to-show: 8;
 .flip-card {
   background-color: transparent;
   width: 22rem;
-  height: 20rem;
-  border: 1px solid #f1f1f1;
+  height: 17rem;
+  border: none;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -66,4 +66,13 @@ $lines-to-show: 8;
   color: black;
   padding: 1rem;
   transform: rotateY(180deg);
+}
+
+.btn{
+  text-align: center;
+  justify-content: center;
+}
+
+.card-text{
+  text-align: justify;
 }

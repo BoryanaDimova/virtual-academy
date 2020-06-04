@@ -7,13 +7,14 @@ body {
 }
 
 .app-main {
-  //background-image: url("../assets/images/pm_course_woocommerce.jpg");
+  background-image: linear-gradient(to top, rgba(255,248,220, 0.6), rgba(210,180,140, 0.6));//url("../assets/images/pm_course_woocommerce.jpg");
+  background-size: initial;
   height: 100%;
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: darken;
   opacity: 0.8;
+
 }
 .navbar{
   background: rgba(0, 0, 0, 0.8);

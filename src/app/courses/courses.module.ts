@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormatPipe} from './pipes/format.pipe';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CoursesRoutingModule} from './courses-routing.module';
 import {CoursesComponent} from './courses.component';
 import {CourseCardItemComponent} from './components/course-card-item/course-card-item.component';
@@ -13,6 +13,7 @@ import { FavouriteCoursesListComponent } from './components/favourite-courses-li
 import { CourseViewItemComponent } from './components/course-view-item/course-view-item.component';
 import {StarRatingModule} from 'angular-rating-star';
 import {RatingModule} from 'ng-starrating';
+import {SharedModule} from '../shared/shared.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {RatingModule} from 'ng-starrating';
     CoursesRoutingModule,
     NgbModule,
     StarRatingModule,
-    RatingModule
+    RatingModule,
+    SharedModule
   ],
   declarations: [
     FormatPipe,

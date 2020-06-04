@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {Route, RouterModule} from '@angular/router';
 import {CoursesCardsListingComponent} from './components/courses-cards-listing/courses-cards-listing.component';
-import {CoursesReactiveFormComponent} from './components/courses-reactive-form/courses-reactive-form.component';
 import {CoursesComponent} from './courses.component';
 import {FavouriteCoursesListComponent} from './components/favourite-courses-list/favourite-courses-list.component';
 import {CourseViewItemComponent} from './components/course-view-item/course-view-item.component';
@@ -10,7 +9,7 @@ import {CourseViewItemComponent} from './components/course-view-item/course-view
 const routes: Route[] = [
   {
     path: '',
-     component: CoursesComponent,
+    component: CoursesComponent,
 
     children: [
       {
@@ -20,14 +19,6 @@ const routes: Route[] = [
       {
         path: 'favourite-courses',
         component: FavouriteCoursesListComponent
-      },
-      {
-        path: 'add',
-        component: CoursesReactiveFormComponent
-      },
-      {
-        path: 'update/:id',
-        component: CoursesReactiveFormComponent
       },
       {
         path: 'view/:id',

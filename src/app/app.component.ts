@@ -12,7 +12,8 @@ import {takeUntil} from 'rxjs/operators';
 export class AppComponent implements OnInit, OnDestroy{
   title = 'Virtual Academy';
   hasLoggedUser: boolean;
-
+  isAdmin: boolean;
+  isMenuCollapsed = true;
   destroy$ = new Subject<boolean>();
 
   constructor(private authService: AuthenticationService,
@@ -21,6 +22,7 @@ export class AppComponent implements OnInit, OnDestroy{
 
   ngOnInit(): void {
     this.checkForLoggedUser();
+
   }
 
   ngOnDestroy(): void {
@@ -37,6 +39,15 @@ export class AppComponent implements OnInit, OnDestroy{
   checkForLoggedUser() {
     this.authService.getHasLoggedIn().pipe(
       takeUntil(this.destroy$)
-    ).subscribe(response => this.hasLoggedUser = response);
+    ).subscribe(response => {
+      this.hasLoggedUser = response;
+      this.checkIfLoggedUserIsAdmin();
+    });
+  }
+
+  checkIfLoggedUserIsAdmin() {
+    this.authService.isLoggedUserAdmin().pipe(
+      takeUntil(this.destroy$)
+    ).subscribe(response => this.isAdmin = response);
   }
 }

@@ -8,6 +8,7 @@ import {UsersTableComponent} from './components/users-table/users-table.componen
 import {UsersRoutingModule} from './users-routing.module';
 import {UsersComponent} from './users.component';
 import {CoursesModule} from '../courses/courses.module';
+import {SharedModule} from '../shared/shared.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {CoursesModule} from '../courses/courses.module';
     HttpClientModule,
     UsersRoutingModule,
     CoursesModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   declarations: [
     PasswordFormatPipe,

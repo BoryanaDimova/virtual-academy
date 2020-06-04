@@ -56,10 +56,10 @@ export class RegistrationComponent implements OnInit {
 
   private buildForm(): void {
     this.form = this.fb.group({
-      fName: ['', Validators.required],
-      lName: ['', Validators.required],
+      firstName: ['', Validators.compose([Validators.required, FormValidators.namePatternValidator()])],
+      lastName: ['', Validators.compose([Validators.required, FormValidators.namePatternValidator()])],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.compose([Validators.required, FormValidators.patternValidator()])],
+      password: ['', Validators.compose([Validators.required, FormValidators.passwordPatternValidator()])],
       confirmPassword: ['', [Validators.required, FormValidators.MatchPassword(this.form?.controls?.password.value)]],
       isBlocked: false,
       isAdmin: false

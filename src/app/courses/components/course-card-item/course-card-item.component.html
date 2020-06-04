@@ -4,12 +4,28 @@
       <img class="card-img-top" [src]="course.imageUrl" [alt]="course.title">
     </div>
     <div class="flip-card-back">
-      <h5 class="card-title" type="button" (click)="navigateToView()">{{course.title}}</h5>
-      <p class="card-text multiline-ellipsis">{{course.description | format: 300 }}</p>
-
-      <div class="row justify-content-between">
-        <app-favourite-button *ngIf="favourite != undefined" [selected]="favourite" (selectedChange)="onFavouriteButtonClicked($event)"></app-favourite-button>
-        <i class="fa fa-trash btn btn-outline-dark ml-2" type="button" aria-hidden="true" (click)="onDeleteClick()"></i>
+      <div class="row card-title">
+        <div class="col-2" *ngIf="favourite != undefined" >
+          <app-favourite-button [selected]="favourite"
+                                (selectedChange)="onFavouriteButtonClicked($event)">
+          </app-favourite-button>
+        </div>
+        <div [class]="favourite != undefined ?'col-10' : 'col-12'">
+          <div class="btn btn-link btn-lg" type="button" (click)="navigateToView()"> {{course.title}} </div>
+        </div>
+      </div>
+      <div class="row">
+        <p class="card-text multiline-ellipsis">{{course.description | format: 250 }}</p>
+      </div>
+      <div class="row"
+           [class]="(isCurrentUserAdmin || favourite == undefined) ? 'justify-content-between' : 'justify-content-center'">
+        <i class="btn btn-outline-primary ml-2" (click)="navigateToView()">Details</i>
+        <i *ngIf="favourite == undefined" class="btn btn-outline-dark ml-2 fa fa-times" type="button" aria-hidden="true"
+           (click)="onRemoveClick()"></i>
+        <i *ngIf="(favourite != undefined && isCurrentUserAdmin)" class="btn btn-outline-dark ml-2 fa " [ngClass]="{
+                          'fa-times': favourite == undefined,
+                          'fa-trash': (favourite != undefined && isCurrentUserAdmin)
+                        }" type="button" aria-hidden="true" (click)="onRemoveClick()"></i>
       </div>
     </div>
   </div>

@@ -6,6 +6,7 @@ import {UserService} from '../../services/user.service';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 import {AuthenticationService} from '../../../auth/services/authentication.service';
+import {FormValidators} from '../../../core/validators/form.validators';
 
 @Component({
   selector: 'app-user-reactive-form',
@@ -17,6 +18,7 @@ export class UserReactiveFormComponent implements OnInit, OnDestroy {
   formGroup: FormGroup;
   editable: boolean;
   user: User;
+  fieldTextType: boolean;
 
   destroy$ = new Subject<boolean>();
 
@@ -54,15 +56,18 @@ export class UserReactiveFormComponent implements OnInit, OnDestroy {
   }
 
   private buildForm(): void {
-
     this.formGroup = this.fb.group({
       id: [this.user.id],
-      firstName: [this.user.firstName, [Validators.required]],
-      lastName: [this.user.lastName, [Validators.required]],
-      email: [this.user.email],
-      password: [this.user.password],
-      isBlocked: [this.user.isBlocked],
-      isAdmin: [this.user.isAdmin]
+      firstName: [this.user.firstName, Validators.compose([Validators.required, FormValidators.namePatternValidator()])],
+      lastName: [this.user.lastName, Validators.compose([Validators.required, FormValidators.namePatternValidator()])],
+      email: [this.user.email, [Validators.required, Validators.email]],
+      password: [this.user.password, Validators.compose([Validators.required, FormValidators.passwordPatternValidator()])],
+      isBlocked: [this.user.isBlocked, Validators.required],
+      isAdmin: [this.user.isAdmin, Validators.required]
     });
+  }
+
+  togglePass(): void {
+    this.fieldTextType = !this.fieldTextType;
   }
 }
