@@ -26,9 +26,9 @@
           </div>
           <input type="text"
                  class="form-control"
-                 id="fName"
+                 id="firstName"
                  placeholder="John"
-                 formControlName="fName">
+                 formControlName="firstName">
         </div>
         <app-field-error-message [control]="form.get('firstName')"></app-field-error-message>
       </div>
@@ -43,9 +43,9 @@
           </div>
           <input type="text"
                  class="form-control"
-                 id="lName"
+                 id="lastName"
                  placeholder="Doe"
-                 formControlName="lName">
+                 formControlName="lastName">
         </div>
         <app-field-error-message [control]="form.get('lastName')"></app-field-error-message>
       </div>
@@ -131,7 +131,7 @@
 
       <!--        buttons -->
       <div class="row">
-        <button type="submit" class="btn log-in" (click)="onSubmit()">Sign Up</button>
+        <button type="submit" class="btn log-in">Sign Up</button>
       </div>
     </form>
     <!-- End Form -->

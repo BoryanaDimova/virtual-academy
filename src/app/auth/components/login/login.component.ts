@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit, OnDestroy{
 
   form: FormGroup;
   fieldTextType: boolean;
+  errorMessage: string;
 
   destroy$ = new Subject<boolean>();
 
@@ -40,7 +41,7 @@ export class LoginComponent implements OnInit, OnDestroy{
        takeUntil(this.destroy$)
      ).subscribe(response => {
        if (response.isBlocked){
-         // add error message
+         this.errorMessage = 'This user has been blocked. Please contact your administrator for more information.';
          return;
        }
 

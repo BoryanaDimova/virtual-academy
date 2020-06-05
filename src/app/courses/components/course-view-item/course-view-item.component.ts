@@ -104,6 +104,11 @@ export class CourseViewItemComponent implements OnInit, OnDestroy {
     ).subscribe(response => {
       this.course = response;
       this.getCurrentUserRate();
+    }, error => {
+      console.log(error);
+      if (error.status === 404) {
+        this.router.navigate(['courses/favourite-courses']);
+      }
     });
   }
 

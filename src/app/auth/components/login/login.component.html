@@ -7,6 +7,12 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-md-12">
+      <p *ngIf="errorMessage" class="text-danger text-center">{{errorMessage}}</p>
+    </div>
+  </div>
+
   <div class="row justify-content-center">
     <!-- Start Form -->
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
@@ -56,7 +62,7 @@
       </div>
       <!--        buttons -->
       <div class="row justify-content-center">
-        <button type="submit" class="btn log-in" (click)="onSubmit()"> Log In</button>
+        <button type="submit" class="btn log-in"> Log In</button>
       </div>
     </form>
     <!-- End Form -->

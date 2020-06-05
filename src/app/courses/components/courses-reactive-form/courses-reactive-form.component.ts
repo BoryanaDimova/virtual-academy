@@ -32,9 +32,6 @@ export class CoursesReactiveFormComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(): void {
-    if (!this.formGroup.valid) {
-      return;
-    }
     const course = this.formGroup.value;
 
     this.courseService.saveCourse(course).pipe(

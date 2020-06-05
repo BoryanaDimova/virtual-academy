@@ -31,16 +31,13 @@ export class RegistrationComponent implements OnInit {
   onSubmit(): void {
     const user: User = this.form.value;
 
-    if (!this.form.valid) {
-      return;
-    }
     // check if user with this email already exists
     this.authService.getUsers().pipe(
       map((response: User[]) => response.find(usr => usr.email === user.email)),
       takeUntil(this.destroy$)
     ).subscribe(userResponse => {
       if (userResponse) {
-        this.errorMessage = 'Email has already been taken! Try another one!';
+        this.errorMessage = 'This email has already been taken! Try another one!';
         return;
       }
 

@@ -72,6 +72,10 @@ export class FavouriteCoursesListComponent implements OnInit, OnDestroy {
     this.favouritesCoursesService.getFavourites().pipe(
       takeUntil(this.destroy$)
     ).subscribe(response => {
+      if (response.length <= 0) {
+        this.router.navigate(['courses/courses-cards-list']);
+      }
+
       this.favourites = response;
       this.populateSet();
     }, error => {
