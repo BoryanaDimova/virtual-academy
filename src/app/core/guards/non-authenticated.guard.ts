@@ -14,7 +14,7 @@ export class NonAuthenticatedGuard implements CanLoad {
   canLoad(): boolean {
     const user = this.authService.getLoggedUser();
     if (user) {
-      this.router.navigate(['home']);
+      this.router.navigate(['auth/login']);
 
       return false;
     }

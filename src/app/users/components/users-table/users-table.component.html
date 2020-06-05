@@ -1,109 +1,118 @@
-<table class="table table-striped">
-  <thead>
-  <tr>
-    <th scope="col">#</th>
-    <th scope="col">First Name</th>
-    <th scope="col">Last Name</th>
-    <th scope="col">Email</th>
-    <th scope="col">Password</th>
-    <th scope="col">Blocked</th>
-    <th scope="col">Role</th>
-    <th scope="col">Actions</th>
-    <th scope="col">
-      <button class="fa fa-plus btn btn-outline-success ml-2" type="button" aria-hidden="true"
-              (click)="addNewUser()"></button>
-    </th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let user of users; let i = index">
-    <th scope="row">{{i + 1}}</th>
-    <td>
-      <input *ngIf="(user.id === formGroup.controls.id.value && !editDisabled); else fNameElse"
-             type="text"
-             class="form-control"
-             id="firstName"
-             (change)="formGroup.controls.firstName.markAsTouched();
-                       formGroup.controls.firstName.setValue($event.target.value);"
-             [value]="formGroup.controls.firstName.value"/>
-      <app-field-error-message *ngIf="(user.id === formGroup.controls.id.value && !editDisabled)" [control]="formGroup.get('firstName')"></app-field-error-message>
-      <ng-template #fNameElse><span>{{user.firstName}}</span></ng-template>
-    </td>
-    <td>
-      <input *ngIf="(user.id == formGroup.controls.id.value && !editDisabled); else lNameElse"
-             type="text"
-             class="form-control"
-             id="lastName"
-             (change)="formGroup.controls.lastName.markAsTouched();
-                       formGroup.controls.lastName.setValue($event.target.value)"
-             [value]="formGroup.controls.lastName.value"/>
-      <app-field-error-message *ngIf="(user.id === formGroup.controls.id.value && !editDisabled)" [control]="formGroup.get('lastName')"></app-field-error-message>
-      <ng-template #lNameElse><span>{{user.lastName}}</span></ng-template>
-    </td>
-    <td>
-      <input *ngIf="(user.id === formGroup.controls.id.value && !editDisabled); else emailElse"
-             type="text"
-             class="form-control"
-             id="email"
-             (change)="formGroup.controls.email.markAsTouched();
-                       formGroup.controls.email.setValue($event.target.value)"
-             [value]="formGroup.controls.email.value"/>
-      <app-field-error-message *ngIf="(user.id === formGroup.controls.id.value && !editDisabled)"  [control]="formGroup.get('email')"></app-field-error-message>
-      <ng-template #emailElse><span>{{user.email}}</span></ng-template>
-    </td>
-    <td>
-      <input *ngIf="(user.id == formGroup.controls.id.value && !editDisabled); else passElse"
-             type="password"
-             class="form-control"
-             id="password"
-             [value]="formGroup.controls.password.value"
-             (change)="formGroup.controls.password.markAsTouched();
-                       formGroup.controls.password.setValue($event.target.value)"/>
-      <app-field-error-message *ngIf="(user.id === formGroup.controls.id.value && !editDisabled)"  [control]="formGroup.get('password')"></app-field-error-message>
-      <ng-template #passElse><span class="pass">{{user.password | passwordFormat}}</span></ng-template>
-    </td>
-    <td>
-      <input *ngIf="(user.id == formGroup.controls.id.value && !editDisabled); else blockedElse"
-             type="checkbox"
-             class="form-control"
-             id="isBlocked"
-             [checked]="formGroup.controls.isBlocked.value"
-             (change)="formGroup.controls.isBlocked.setValue($event.target.checked)"/>
-      <ng-template #blockedElse><span type="checkbox">{{user.isBlocked}}</span></ng-template>
-    </td>
-    <td>
-      <select *ngIf="(user.id == formGroup.controls.id.value && !editDisabled); else roleElse"
-              class="form-control"
-              id="role"
-              (change)="formGroup.controls.isAdmin.setValue($event.target.value == 'true')"
-              [value]="formGroup.controls.isAdmin.value"
-              [(ngModel)]="user.isAdmin">
-        <option [selected]="user.isAdmin" label="Admin" value="true"></option>
-        <option [selected]="!user.isAdmin" label="User" value="false"></option>
-      </select>
-      <ng-template #roleElse><span>{{user.isAdmin ? 'Admin' : 'User'}}</span></ng-template>
-    </td>
-
-    <td *ngIf="user.id === formGroup.controls.id.value&& !editDisabled; else elseBlock">
-      <button class="fa fa-check-square-o btn btn-outline-primary ml-2" type="submit" aria-hidden="true"
-              ng-disabled="!formGroup.valid"
-              (click)="updateEdit()"></button>
-      <button class="fa fa-close btn btn-outline-dark ml-2" type="button" aria-hidden="true"
-              (click)="cancelEdit()"></button>
-    </td>
-    <ng-template #elseBlock>
+<div class="table-responsive-sm">
+  <table class="table table-striped table-hover align-items-center">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+      <th scope="col">Blocked</th>
+      <th scope="col">Role</th>
+      <th scope="col">Actions</th>
+      <th scope="col">
+        <button class="fa fa-plus btn btn-outline-success ml-2" type="button" aria-hidden="true"
+                (click)="addNewUser()"></button>
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users; let i = index">
+      <td scope="row">{{i + 1}}</td>
       <td>
-        <button class="fa fa-pencil btn btn-outline-primary ml-2" type="button" aria-hidden="true"
-                (click)="editRow(user)"></button>
-        <button class="fa fa-ban btn btn-outline-danger ml-2" type="button" aria-hidden="true"
-                (click)="onBlockClick(user)"
-                [disabled]="user.isBlocked"></button>
-        <button class="fa fa-trash btn btn-outline-dark ml-2" type="button" aria-hidden="true"
-                (click)="onDeleteClick(user.id)"></button>
+        <input *ngIf="(user.id === formGroup.controls.id.value && !editDisabled); else fNameElse"
+               type="text"
+               class="form-control"
+               id="firstName"
+               (change)="formGroup.controls.firstName.markAsTouched();
+                       formGroup.controls.firstName.setValue($event.target.value);"
+               [value]="formGroup.controls.firstName.value"/>
+        <app-field-error-message *ngIf="(user.id === formGroup.controls.id.value && !editDisabled)"
+                                 [control]="formGroup.get('firstName')"></app-field-error-message>
+        <ng-template #fNameElse><span>{{user.firstName}}</span></ng-template>
       </td>
-    </ng-template>
-    <td></td>
-  </tr>
-  </tbody>
-</table>
+      <td>
+        <input *ngIf="(user.id == formGroup.controls.id.value && !editDisabled); else lNameElse"
+               type="text"
+               class="form-control"
+               id="lastName"
+               (change)="formGroup.controls.lastName.markAsTouched();
+                       formGroup.controls.lastName.setValue($event.target.value)"
+               [value]="formGroup.controls.lastName.value"/>
+        <app-field-error-message *ngIf="(user.id === formGroup.controls.id.value && !editDisabled)"
+                                 [control]="formGroup.get('lastName')"></app-field-error-message>
+        <ng-template #lNameElse><span>{{user.lastName}}</span></ng-template>
+      </td>
+      <td>
+        <input *ngIf="(user.id === formGroup.controls.id.value && !editDisabled); else emailElse"
+               type="text"
+               class="form-control"
+               id="email"
+               (change)="formGroup.controls.email.markAsTouched();
+                       formGroup.controls.email.setValue($event.target.value)"
+               [value]="formGroup.controls.email.value"/>
+        <app-field-error-message *ngIf="(user.id === formGroup.controls.id.value && !editDisabled)"
+                                 [control]="formGroup.get('email')"></app-field-error-message>
+        <ng-template #emailElse><span>{{user.email}}</span></ng-template>
+      </td>
+      <td>
+        <input *ngIf="(user.id == formGroup.controls.id.value && !editDisabled); else passElse"
+               type="password"
+               class="form-control"
+               id="password"
+               [value]="formGroup.controls.password.value"
+               (change)="formGroup.controls.password.markAsTouched();
+                       formGroup.controls.password.setValue($event.target.value)"/>
+        <app-field-error-message *ngIf="(user.id === formGroup.controls.id.value && !editDisabled)"
+                                 [control]="formGroup.get('password')"></app-field-error-message>
+        <ng-template #passElse><span class="pass">{{user.password | passwordFormat}}</span></ng-template>
+      </td>
+      <td class="justify-content-md-center">
+        <input *ngIf="(user.id == formGroup.controls.id.value && !editDisabled); else blockedElse"
+               type="checkbox"
+               class="form-control custom-checkbox"
+               id="isBlocked"
+               [checked]="formGroup.controls.isBlocked.value"
+               (change)="formGroup.controls.isBlocked.setValue($event.target.checked)">
 
+        <ng-template #blockedElse>
+          <span class="fa" [ngClass]="{
+                          'fa-square-o': !user.isBlocked,
+                          'fa-check-square-o': user.isBlocked
+                        }"></span></ng-template>
+      </td>
+      <td>
+        <select *ngIf="(user.id == formGroup.controls.id.value && !editDisabled); else roleElse"
+                class="form-control custom-select"
+                id="role"
+                (change)="formGroup.controls.isAdmin.setValue($event.target.value == 'true')"
+                [value]="formGroup.controls.isAdmin.value"
+                [(ngModel)]="user.isAdmin">
+          <option [selected]="user.isAdmin" label="Admin" value="true"></option>
+          <option [selected]="!user.isAdmin" label="User" value="false"></option>
+        </select>
+        <ng-template #roleElse><span>{{user.isAdmin ? 'Admin' : 'User'}}</span></ng-template>
+      </td>
+      <td *ngIf="user.id === formGroup.controls.id.value&& !editDisabled; else elseBlock" class="actions">
+        <button class="fa fa-check-square-o btn btn-outline-primary ml-2" type="submit" aria-hidden="true"
+                ng-disabled="!formGroup.valid"
+                (click)="updateEdit()"></button>
+        <button class="fa fa-close btn btn-outline-dark ml-2" type="button" aria-hidden="true"
+                (click)="cancelEdit()"></button>
+      </td>
+      <ng-template #elseBlock>
+        <td class="actions">
+          <button class="fa fa-pencil btn btn-outline-primary ml-2" type="button" aria-hidden="true"
+                  (click)="editRow(user)"></button>
+          <button class="fa fa-ban btn btn-outline-danger ml-2" type="button" aria-hidden="true"
+                  (click)="onBlockClick(user)"
+                  [disabled]="user.isBlocked"></button>
+          <button class="fa fa-trash btn btn-outline-dark ml-2" type="button" aria-hidden="true"
+                  (click)="onDeleteClick(user.id)"></button>
+        </td>
+      </ng-template>
+      <td></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

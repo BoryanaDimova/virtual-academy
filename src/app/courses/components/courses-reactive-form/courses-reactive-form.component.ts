@@ -4,7 +4,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 import {CourseService} from '../../services/course.service';
-import { NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-courses-reactive-form',
@@ -29,9 +29,12 @@ export class CoursesReactiveFormComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.destroy$.next(true);
     this.destroy$.unsubscribe();
-   }
+  }
 
   onSubmit(): void {
+    if (!this.formGroup.valid) {
+      return;
+    }
     const course = this.formGroup.value;
 
     this.courseService.saveCourse(course).pipe(
@@ -58,7 +61,9 @@ export class CoursesReactiveFormComponent implements OnInit, OnDestroy {
       title: [this.course.title, [Validators.required]],
       description: [this.course.description, [Validators.required]],
       datePublished: [this.course.datePublished],
-      imageUrl: [this.course.imageUrl]
+      imageUrl: [this.course.imageUrl],
+      ratingsSum: [this.course.ratingsSum],
+      ratingsCount: [this.course.ratingsCount]
     });
   }
 

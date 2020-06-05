@@ -3,10 +3,10 @@
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">{{course.id ? 'Update' : 'Add'}} course</h4>
-        <button type="button" class="close fa fa-close" aria-label="Close" tabindex="-1"
-                (click)="activeModal.dismiss('Cross click')">
-        </button>
+          <h4 class="modal-title">{{course.id ? 'Update' : 'Add'}} course</h4>
+          <button type="button" class="close fa fa-close" aria-label="Close" tabindex="-1"
+                  (click)="activeModal.dismiss('Cross click')">
+          </button>
       </div>
       <div class="modal-body">
         <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
@@ -62,8 +62,7 @@
           Close
         </button>
         <button id="modal-action-button" type="submit"
-                class="btn"
-                [disabled]="formGroup.invalid" (click)="onSubmit()">Save
+                class="btn" (click)="onSubmit()">Save
         </button>
       </div>
     </div>

@@ -1,31 +1,42 @@
 .close{
-  border: 1px solid #f1f1f1;
+  border: none;
 }
 
 .modal{
   width: 100%;
   display: initial !important;
 }
-
-#modal-content-wrapper {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  color: white;
+.modal-content{
+  height: auto;
+  border-radius: 5px;
+  margin: 2% auto;
+  box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+  padding: 2%;
+  background-image: linear-gradient(to top, rgba(255,228,181, 0.4),  rgba(255, 218, 185, 0.4));
+  opacity: 0.9;
 }
 
 .modal-title {
-  font-size: 30px;
+  font-size: 250%;
+  font-family: 'Playfair Display', serif;
   color: black;
+  margin: 2% auto 2% auto;
+  text-align: center;
 }
 
-.modal-footer .btn-group button {
-  border-top-left-radius : 0;
-  border-top-right-radius : 0;
-  border: none;
-  border-right: 1px solid #ddd;
+.modal-footer.btn-group button {
+  //border-top-left-radius : 0;
+  //border-top-right-radius : 0;
+  //border: none;
+
+  //outline: none;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  font-family: 'Playfair Display', sans-serif;
 }
 
-.modal-footer .btn-group:last-child > button {
+.modal-footer.btn-group:last-child > button {
   border-right: 0;
 }
